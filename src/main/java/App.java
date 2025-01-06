@@ -1,20 +1,14 @@
 import domain.wiseSaying.WiseSaying;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import domain.wiseSaying.WiseSayingController;
 import java.util.Scanner;
 
 public class App {
-
     private final Scanner sc;
-    private int lastId;
-    private List<WiseSaying> wiseSayingList;
+    private final WiseSayingController wiseSayingController;
 
     public App(Scanner sc) {
         this.sc = sc;
-        this.lastId = 0;
-        this.wiseSayingList = new ArrayList<>();
+        this.wiseSayingController=new WiseSayingController(sc);
     }
 
     public void run() {
@@ -28,17 +22,9 @@ public class App {
                 System.out.println("명언앱을 종료합니다.");
                 break;
             } else if (cmd.equals("등록")) {
-
-
+                wiseSayingController.actionWrite();
             } else if (cmd.equals("목록")) {
-                System.out.println("""
-                        번호 / 작가 / 명언
-                        ----------------------
-                        """);
-
-                for (int i = wiseSayingList.size() - 1; i >= 0; i--) {
-                    System.out.printf("%d / %s / %s\n", wiseSayingList.get(i).getId(), wiseSayingList.get(i).getAuthor(), wiseSayingList.get(i).getContent());
-                }
+                wiseSayingController.actionPrint();
             }
         }
 
