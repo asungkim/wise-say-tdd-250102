@@ -1,10 +1,7 @@
 package app.standard;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,10 +9,20 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class FIleTest {
 
+    @BeforeAll
+    static void beforeAll() {
+        System.out.println("테스트 실행 전에 한번 실행");
+        Util.File.createDir("test");
+    }
+
+    @AfterAll
+    static void afterEach() {
+        System.out.println("테스트 실행 후에 한번 실행");
+        Util.File.delete("test");
+    }
 
 
 
@@ -87,7 +94,7 @@ public class FIleTest {
         assertThat(Files.exists(Paths.get(dirPath)))
                 .isTrue();
 
-        assertThat(Files.isDirectory(Paths.get(dirPath)))
+        assertThat(Files.isDirectory(Path.of(dirPath)))
                 .isTrue();
     }
 
