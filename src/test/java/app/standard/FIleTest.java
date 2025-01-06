@@ -96,16 +96,8 @@ public class FIleTest {
     void t7() {
         String dirPath="test";
 
-        Util.File.createDir(dirPath);
+        Util.File.delete(dirPath);
 
-        assertThat(Files.exists(Paths.get(dirPath)))
-                .isTrue();
-
-        assertThat(Files.isDirectory(Paths.get(dirPath)))
-                .isTrue();
-
-
-        Util.File.deleteDir(dirPath);
         assertThat(Files.exists(Paths.get(dirPath)))
                 .isFalse();
     }

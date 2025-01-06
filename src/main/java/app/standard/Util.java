@@ -63,9 +63,6 @@ public class Util {
                 e.printStackTrace();
             }
         }
-
-        public static void deleteDir(String dirPath) {
-        }
     }
 
 }
