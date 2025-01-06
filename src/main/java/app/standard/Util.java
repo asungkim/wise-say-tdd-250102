@@ -55,6 +55,13 @@ public class Util {
         }
 
         public static void createDir(String dirPath) {
+            try {
+                Files.createDirectory(Paths.get(dirPath));
+            }
+            catch (IOException e) {
+                System.out.println("폴더 생성 실패");
+                e.printStackTrace();
+            }
         }
     }
 
