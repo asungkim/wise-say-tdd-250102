@@ -3,7 +3,7 @@ import java.io.PrintStream;
 import java.util.Scanner;
 
 public class TestBot {
-    public String run(String input) {
+    public static String run(String input) {
         Scanner sc = new Scanner(input+"종료\n");
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
