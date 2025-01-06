@@ -52,6 +52,13 @@ public class Util {
         }
 
         public static void delete(String file) {
+            try {
+                Files.delete(Paths.get(file));
+            }
+            catch (IOException e) {
+                System.out.println("파일 삭제 실패");
+                e.printStackTrace();
+            }
 
         }
     }
