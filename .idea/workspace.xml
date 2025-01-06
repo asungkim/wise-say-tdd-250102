@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/global/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/global/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" afterDir="false" />
     </list>
@@ -60,6 +59,7 @@
     "JUnit.CommandTest.t2.executor": "Run",
     "JUnit.CommandTest.t4.executor": "Run",
     "JUnit.CommandTest.t6.executor": "Run",
+    "JUnit.CommandTest.t7.executor": "Run",
     "JUnit.FirstTest.executor": "Run",
     "JUnit.FirstTest.t10.executor": "Run",
     "JUnit.FirstTest.t11.executor": "Run",
@@ -87,7 +87,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CommandTest">
+  <component name="RunManager" selected="JUnit.CommandTest.t7">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -151,22 +151,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WiseSayingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CommandTest.t7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.global" />
+      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
+      <option name="METHOD_NAME" value="t7" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandTest.t7" />
         <item itemvalue="JUnit.CommandTest" />
         <item itemvalue="JUnit.CommandTest.t6" />
         <item itemvalue="JUnit.CommandTest.t4" />
         <item itemvalue="JUnit.CommandTest.t2" />
-        <item itemvalue="JUnit.WiseSayingControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +195,7 @@
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
-      <workItem from="1736131729519" duration="13731000" />
+      <workItem from="1736131729519" duration="18597000" />
     </task>
     <servers />
   </component>

@@ -74,4 +74,17 @@ public class CommandTest {
 
     }
 
+    @Test
+    @DisplayName("Map을 이용하여 파라미터 저장 및 제공 - 목록?keywordType=author&keyword=작자 ")
+    void t7() {
+        Command cmd=new Command("목록?key1=val1&key2=val2");
+
+        String param1=cmd.getParam("key1");
+        String param2=cmd.getParam("key2");
+
+        assertThat(param1).isEqualTo("val1");
+        assertThat(param2).isEqualTo("val2");
+
+    }
+
 }
