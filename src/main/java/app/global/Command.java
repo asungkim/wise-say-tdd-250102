@@ -20,6 +20,9 @@ public class Command {
 
         String params = cmdBits[1];
 
+        // 목록?expr=1=1
+
+
         String[] paramBits = params.split("=");
         paramKey = paramBits[0];
         paramValue = paramBits[1];
