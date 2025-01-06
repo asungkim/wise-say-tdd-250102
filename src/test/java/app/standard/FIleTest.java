@@ -90,4 +90,23 @@ public class FIleTest {
         assertThat(Files.isDirectory(Paths.get(dirPath)))
                 .isTrue();
     }
+
+    @Test
+    @DisplayName("폴더 삭제")
+    void t7() {
+        String dirPath="test";
+
+        Util.File.createDir(dirPath);
+
+        assertThat(Files.exists(Paths.get(dirPath)))
+                .isTrue();
+
+        assertThat(Files.isDirectory(Paths.get(dirPath)))
+                .isTrue();
+
+
+        Util.File.deleteDir(dirPath);
+        assertThat(Files.exists(Paths.get(dirPath)))
+                .isFalse();
+    }
 }
