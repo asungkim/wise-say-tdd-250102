@@ -107,4 +107,27 @@ public class FirstTest {
                 .contains("2번 명언이 등록되었습니다.");
 
     }
+
+    @Test
+    @DisplayName("목록 명령어 입력시 목록 출력 - 5단계")
+    void t9() {
+        TestBot testBot = new TestBot();
+        String out = testBot.run("""
+                등록
+                현재를 사랑하라.
+                작자 미상
+                등록
+                현재를 사랑하라.
+                작자 미상
+                목록
+                """);
+
+        assertThat(out)
+                .contains(" 번호 / 작가 / 명언")
+                .contains("----------------------")
+                .containsSubsequence("2 / 작자미상 / 과거에 집착하지 마라.",
+                        "1 / 작자미상 / 현재를 사랑하라.");
+
+
+    }
 }
