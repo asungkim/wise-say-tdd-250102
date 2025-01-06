@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSaying.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,35 +52,35 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "JUnit.FirstTest.executor": "Run",
-    "JUnit.FirstTest.t3.executor": "Run",
-    "JUnit.FirstTest.t4.executor": "Run",
-    "JUnit.FirstTest.t5.executor": "Run",
-    "JUnit.FirstTest.t7.executor": "Run",
-    "JUnit.FirstTest.t8.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t7.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="JUnit.FirstTest.t8">
+}</component>
+  <component name="RunManager" selected="JUnit.FirstTest">
     <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -130,8 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FirstTest.t8" />
         <item itemvalue="JUnit.FirstTest" />
+        <item itemvalue="JUnit.FirstTest.t8" />
         <item itemvalue="JUnit.FirstTest.t7" />
         <item itemvalue="JUnit.FirstTest.t4" />
         <item itemvalue="JUnit.FirstTest.t3" />
@@ -155,7 +157,8 @@
       <option name="presentableId" value="Default" />
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
-      <workItem from="1736119966691" duration="10262000" />
+      <workItem from="1736119966691" duration="11698000" />
+      <workItem from="1736131729519" duration="318000" />
     </task>
     <servers />
   </component>
