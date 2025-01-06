@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +58,7 @@
     "JUnit.FirstTest.t4.executor": "Run",
     "JUnit.FirstTest.t5.executor": "Run",
     "JUnit.FirstTest.t7.executor": "Run",
+    "JUnit.FirstTest.t8.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -154,7 +154,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
-      <workItem from="1736119966691" duration="9240000" />
+      <workItem from="1736119966691" duration="9548000" />
     </task>
     <servers />
   </component>
