@@ -21,10 +21,12 @@ public class Command {
         String params = cmdBits[1];
 
         // 목록?expr=1=1
-
-
-        String[] paramBits = params.split("=");
+        String[] paramBits = params.split("=", 2);
         paramKey = paramBits[0];
+        if (paramBits.length < 2) {
+            return;
+        }
+
         paramValue = paramBits[1];
 
     }
@@ -34,7 +36,7 @@ public class Command {
         return actionName;
     }
 
-    public int getParams() {
-        return Integer.parseInt(paramValue);
+    public String getParam() {
+        return paramValue;
     }
 }

@@ -48,9 +48,10 @@ public class CommandTest {
     void t5() {
         Command cmd = new Command("목록?id=1");
 
-        int paramValue = cmd.getParams();
+        String paramValue = cmd.getParam();
+        int id=Integer.parseInt(paramValue);
 
-        assertThat(paramValue).isEqualTo(1);
+        assertThat(id).isEqualTo(1);
 
     }
 
@@ -58,13 +59,13 @@ public class CommandTest {
     @DisplayName("불완전한 입력값이 들어올 때, 입력값1 - 목록?expr=1=1, 입력값2 - 목록?page, 삭제?id=aa ")
     void t6() {
         Command cmd1 = new Command("목록?expr=1=1");
-        int param1 = cmd1.getParams();
+        String param1 = cmd1.getParam();
 
         Command cmd2 = new Command("목록?page");
-        int param2 = cmd1.getParams();
+        String param2 = cmd2.getParam();
 
         Command cmd3 = new Command("삭제?id=aa");
-        int param3 = cmd1.getParams();
+        String param3 = cmd3.getParam();
 
 
         assertThat(param1).isEqualTo("1=1");
