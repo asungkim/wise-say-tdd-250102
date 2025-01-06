@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSaying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/app/standard/FIleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -62,6 +62,8 @@
     "JUnit.CommandTest.t4.executor": "Run",
     "JUnit.CommandTest.t6.executor": "Run",
     "JUnit.CommandTest.t7.executor": "Run",
+    "JUnit.FIleTest.t1.executor": "Run",
+    "JUnit.FIleTest.t2.executor": "Run",
     "JUnit.FirstTest.executor": "Run",
     "JUnit.FirstTest.t10.executor": "Run",
     "JUnit.FirstTest.t11.executor": "Run",
@@ -76,6 +78,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102",
@@ -91,7 +95,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t12">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="app.standard" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.FIleTest.t2">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -107,33 +119,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest.t5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FIleTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.global.*" />
+          <option name="PATTERN" value="app.standard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="app.global" />
-      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
-      <option name="METHOD_NAME" value="t5" />
+      <option name="PACKAGE_NAME" value="app.standard" />
+      <option name="MAIN_CLASS_NAME" value="app.standard.FIleTest" />
+      <option name="METHOD_NAME" value="t1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest.t7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FIleTest.t2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.global.*" />
+          <option name="PATTERN" value="app.standard.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="app.global" />
-      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
-      <option name="METHOD_NAME" value="t7" />
+      <option name="PACKAGE_NAME" value="app.standard" />
+      <option name="MAIN_CLASS_NAME" value="app.standard.FIleTest" />
+      <option name="METHOD_NAME" value="t2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -171,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FIleTest.t2" />
+        <item itemvalue="JUnit.FIleTest.t1" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t12" />
         <item itemvalue="JUnit.app in wise-say-tdd-250102.test" />
         <item itemvalue="JUnit.CommandTest" />
-        <item itemvalue="JUnit.CommandTest.t5" />
-        <item itemvalue="JUnit.CommandTest.t7" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +210,7 @@
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
-      <workItem from="1736161121005" duration="4241000" />
+      <workItem from="1736161121005" duration="6055000" />
     </task>
     <servers />
   </component>
