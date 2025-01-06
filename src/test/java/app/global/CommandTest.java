@@ -1,8 +1,9 @@
 package app.global;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.*;
 
 public class CommandTest {
     @Test
@@ -18,6 +19,16 @@ public class CommandTest {
 
         String actionName=cmd.getActionName();
 
-        Assertions.assertThat(actionName).isEqualTo("목록");
+        assertThat(actionName).isEqualTo("목록");
+    }
+
+    @Test
+    @DisplayName("입력 형태가 '삭제' ? 가 없으면 잘 나오는지 확인")
+    void t3() {
+        Command cmd=new Command("목록");
+
+        String actionName=cmd.getActionName();
+
+        assertThat(actionName).isEqualTo("목록");
     }
 }

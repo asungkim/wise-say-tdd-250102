@@ -5,6 +5,9 @@ public class Command {
     String actionName;
 
     public Command(String cmd) {
+
+        // actionName?key=value
+
         String[] cmdBits = cmd.split("\\?");
         actionName = cmdBits[0];
     }
