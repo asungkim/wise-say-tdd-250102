@@ -50,6 +50,10 @@ public class Util {
                 e.printStackTrace();
             }
         }
+
+        public static void delete(String file) {
+
+        }
     }
 
 }

@@ -57,4 +57,16 @@ public class FIleTest {
 
     }
 
+    @Test
+    @DisplayName("파일 삭제")
+    void t5() {
+        String file = "test.txt";
+
+        Util.File.delete(file);
+
+        assertThat(Files.exists(Paths.get(file))).isFalse();
+
+
+    }
+
 }
