@@ -31,4 +31,16 @@ public class CommandTest {
 
         assertThat(actionName).isEqualTo("목록");
     }
+
+    @Test
+    @DisplayName("paramValue 를 가져올 수 있다")
+    void t4() {
+        Command cmd=new Command("목록?id=1");
+
+        int paramValue=cmd.getParams();
+
+        assertThat(paramValue).isEqualTo(1);
+
+    }
+
 }

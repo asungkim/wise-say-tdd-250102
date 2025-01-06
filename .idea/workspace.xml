@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/global/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/SystemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/SystemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSaying.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/standard/TestBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/global/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/global/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +57,7 @@
     "JUnit.CommandTest.executor": "Run",
     "JUnit.CommandTest.t1.executor": "Run",
     "JUnit.CommandTest.t2.executor": "Run",
+    "JUnit.CommandTest.t4.executor": "Run",
     "JUnit.FirstTest.executor": "Run",
     "JUnit.FirstTest.t10.executor": "Run",
     "JUnit.FirstTest.t11.executor": "Run",
@@ -94,7 +85,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.CommandTest.t2">
+  <component name="RunManager" selected="JUnit.CommandTest">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -142,6 +133,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommandTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.global.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.global" />
+      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
+      <option name="METHOD_NAME" value="t4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WiseSayingControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
@@ -151,23 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WiseSayingControllerTest.t11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
-      <option name="METHOD_NAME" value="t11" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CommandTest.t2" />
         <item itemvalue="JUnit.CommandTest" />
+        <item itemvalue="JUnit.CommandTest.t4" />
+        <item itemvalue="JUnit.CommandTest.t2" />
         <item itemvalue="JUnit.WiseSayingControllerTest" />
         <item itemvalue="JUnit.CommandTest.t1" />
-        <item itemvalue="JUnit.WiseSayingControllerTest.t11" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +186,7 @@
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
-      <workItem from="1736131729519" duration="11303000" />
+      <workItem from="1736131729519" duration="12189000" />
     </task>
     <servers />
   </component>
