@@ -62,8 +62,10 @@ public class FIleTest {
     void t5() {
         String file = "test.txt";
 
-        Util.File.delete(file);
+        Util.File.createFile(file);
+        assertThat(Files.exists(Paths.get(file))).isTrue();
 
+        Util.File.delete(file);
         assertThat(Files.exists(Paths.get(file))).isFalse();
 
     }
