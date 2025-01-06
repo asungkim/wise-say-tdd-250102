@@ -12,12 +12,12 @@ public class CommandTest {
     }
 
     @Test
-    @DisplayName("actionName을 얻어올 수 있다")
+    @DisplayName("actionName 을 얻어올 수 있다")
     void t2() {
-        Command cmd=new Command("삭제?id=1");
+        Command cmd=new Command("목록?id=1");
 
         String actionName=cmd.getActionName();
 
-        Assertions.assertThat(actionName).isEqualTo("삭제");
+        Assertions.assertThat(actionName).isEqualTo("목록");
     }
 }
