@@ -44,7 +44,12 @@ public class FirstTest {
     @DisplayName("등록 - 명언 1개 입력")
     void t5() {
         TestBot testBot = new TestBot();
-        String out = testBot.run("등록\n현재를 사랑하라\n작자 미상\n종료");
+        String out = testBot.run("""
+                등록
+                현재를 사랑하라.
+                작자 미상
+                종료
+                """);
 
         assertThat(out)
                 .containsSubsequence("명언 : ","작가 : ");

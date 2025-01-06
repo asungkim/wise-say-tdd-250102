@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TestBot {
     public String run(String input) {
-        Scanner sc = new Scanner(input);
+        Scanner sc = new Scanner(input+"종료\n");
 
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
