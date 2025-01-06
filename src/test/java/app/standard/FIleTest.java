@@ -21,9 +21,9 @@ public class FIleTest {
 
     @Test
     @DisplayName("빈 파일 생성")
-    void t2()  {
+    void t2() {
 
-        String file="test.txt";
+        String file = "test.txt";
         Util.File.createFile(file); // 파일 생성 ok
 
         assertThat(Files.exists(Paths.get(file)))
@@ -34,24 +34,27 @@ public class FIleTest {
     @Test
     @DisplayName("파일 내용 읽어오기")
     void t3() {
-        String file="test.txt";
+        String file = "test.txt";
 
-        String testContent="Hello World!";
+        String testContent = "Hello World!";
 
-        String content= Util.File.readAsString(file);
+        String content = Util.File.readAsString(file);
 
         assertThat(content).isEqualTo(testContent);
     }
 
-    //    @Test
-//    @DisplayName("파일 내용 수정")
-//    void t4() {
-//        String file="test.txt";
-//        Path filePath = Paths.get(file);
-//
-//        Util.File.write(file,"Hello World!");
-//
-//
-//    }
+    @Test
+    @DisplayName("파일 내용 수정")
+    void t4() {
+        String file = "test.txt";
+
+        Util.File.write(file, "modify content!");
+
+        String content = Util.File.readAsString(file);
+
+        assertThat(content).isEqualTo("modify content!");
+
+
+    }
 
 }
