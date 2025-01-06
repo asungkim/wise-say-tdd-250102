@@ -25,7 +25,17 @@ public class Util {
         }
 
         public static String readAsString(String file) {
-            return null;
+            Path filePath= Paths.get(file);
+
+            try {
+                return Files.readString(filePath);
+            }
+            catch (Exception e) {
+                System.out.println("파일 읽기 실패");
+                e.printStackTrace();
+            }
+
+            return "";
         }
     }
 
