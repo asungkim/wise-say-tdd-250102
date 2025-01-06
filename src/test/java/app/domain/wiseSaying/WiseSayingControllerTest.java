@@ -177,4 +177,26 @@ public class WiseSayingControllerTest {
                 .contains("1번 명언은 존재하지 않습니다.");
 
     }
+
+    @Test
+    @DisplayName("명언 삭제에 대한 예외처리 - 7단계")
+    void t12() {
+        String out = TestBot.run("""
+                등록
+                현재를 사랑하라.
+                작자미상
+                등록
+                과거에 집착하지 마라.
+                작자미상
+                수정?id=1
+                새로운 명언
+                새로운 작가
+                목록
+                """);
+
+        assertThat(out)
+                .contains("1 / 새로운 작가 / 새로운 명언")
+                .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
+
+    }
 }

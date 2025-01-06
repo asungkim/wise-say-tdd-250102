@@ -7,6 +7,8 @@
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
     "JUnit.FirstTest.t7.executor": "Run",
     "JUnit.FirstTest.t8.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
+    "JUnit.WiseSayingControllerTest.t12.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -88,7 +91,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.app in wise-say-tdd-250102.test">
+  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t12">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -120,22 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandTest.t6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.global.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.global" />
-      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
-      <option name="METHOD_NAME" value="t6" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CommandTest.t7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -147,6 +134,22 @@
       <option name="PACKAGE_NAME" value="app.global" />
       <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
       <option name="METHOD_NAME" value="t7" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WiseSayingControllerTest.t12" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.wiseSaying.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
+      <option name="METHOD_NAME" value="t12" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +171,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingControllerTest.t12" />
         <item itemvalue="JUnit.app in wise-say-tdd-250102.test" />
         <item itemvalue="JUnit.CommandTest" />
         <item itemvalue="JUnit.CommandTest.t5" />
         <item itemvalue="JUnit.CommandTest.t7" />
-        <item itemvalue="JUnit.CommandTest.t6" />
       </list>
     </recent_temporary>
   </component>
@@ -195,7 +198,7 @@
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
-      <workItem from="1736161121005" duration="1057000" />
+      <workItem from="1736161121005" duration="1558000" />
     </task>
     <servers />
   </component>

@@ -40,9 +40,8 @@ public class WiseSayingController {
         }
     }
 
-    public void actionDelete(String cmd) {
-        Command command=new Command(cmd);
-        int id = command.getParamAsInt("id");
+    public void actionDelete(Command cmd) {
+        int id = cmd.getParamAsInt("id");
 
         boolean result = wiseSayingService.delete(id);
         if (result) {
@@ -50,5 +49,9 @@ public class WiseSayingController {
         } else {
             System.out.println("%d번 명언은 존재하지 않습니다.".formatted(id));
         }
+    }
+
+    public void actionModify(Command cmd) {
+        int id = cmd.getParamAsInt("id");
     }
 }

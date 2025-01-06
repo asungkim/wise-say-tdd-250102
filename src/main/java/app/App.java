@@ -29,8 +29,6 @@ public class App {
             Command command=new Command(cmd);
             String actionName = command.getActionName();
 
-
-
             switch (actionName) {
                 case "종료":
                     systemController.exit();
@@ -42,10 +40,10 @@ public class App {
                     wiseSayingController.actionPrint();
                     break;
                 case "삭제":
-                    wiseSayingController.actionDelete(cmd);
+                    wiseSayingController.actionDelete(command);
                     break;
                 case "수정":
-//                    wiseSayingController.actionModify(cmd);
+                    wiseSayingController.actionModify(command);
                     break;
                 default:
                     System.out.println("올바른 명령이 아닙니다.");
