@@ -1,33 +1,35 @@
 package app.global;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Command {
 
     String actionName;
-    String paramKey;
-    String paramValue;
+    Map<String, String> map;
 
     public Command(String cmd) {
-
-        // actionName?key=value
+        map = new HashMap<>();
 
         String[] cmdBits = cmd.split("\\?");
         actionName = cmdBits[0];
 
         if (cmdBits.length < 2) {
-            paramValue = "";
             return;
         }
 
-        String params = cmdBits[1];
+        String queryString = cmdBits[1];
+        String[] params = queryString.split("&");
 
-        // 목록?expr=1=1
-        String[] paramBits = params.split("=", 2);
-        paramKey = paramBits[0];
-        if (paramBits.length < 2) {
-            return;
+        for (String param : params) {
+            String[] paramBits=param.split("=",2);
+
+            if (paramBits.length<2) {
+                continue;
+            }
+
+            map.put(paramBits[0], paramBits[1]);
         }
-
-        paramValue = paramBits[1];
 
     }
 
@@ -36,7 +38,7 @@ public class Command {
         return actionName;
     }
 
-    public String getParam() {
-        return paramValue;
+    public String getParam(String key) {
+        return map.get(key);
     }
 }
