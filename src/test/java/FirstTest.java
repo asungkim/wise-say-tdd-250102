@@ -155,4 +155,23 @@ public class FirstTest {
                 .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
 
     }
+
+    @Test
+    @DisplayName("명언 삭제에 대한 예외처리 - 7단계")
+    void t11() {
+        String out = TestBot.run("""
+                등록
+                현재를 사랑하라.
+                작자미상
+                등록
+                과거에 집착하지 마라.
+                작자미상
+                삭제?id=1
+                삭제?id=1
+                """);
+
+        assertThat(out)
+                .contains("1번 명언은 존재하지 않습니다.");
+
+    }
 }

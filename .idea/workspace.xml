@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSaying.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/wiseSaying/WiseSayingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,7 @@
     "Application.Main.executor": "Run",
     "JUnit.FirstTest.executor": "Run",
     "JUnit.FirstTest.t10.executor": "Run",
+    "JUnit.FirstTest.t11.executor": "Run",
     "JUnit.FirstTest.t3.executor": "Run",
     "JUnit.FirstTest.t4.executor": "Run",
     "JUnit.FirstTest.t5.executor": "Run",
@@ -83,7 +80,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.FirstTest">
+  <component name="RunManager" selected="JUnit.FirstTest.t11">
     <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,11 +100,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FirstTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstTest.t11" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="FirstTest" />
-      <option name="METHOD_NAME" value="t4" />
+      <option name="METHOD_NAME" value="t11" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -135,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FirstTest.t11" />
         <item itemvalue="JUnit.FirstTest" />
         <item itemvalue="JUnit.FirstTest.t10" />
         <item itemvalue="JUnit.FirstTest.t8" />
         <item itemvalue="JUnit.FirstTest.t7" />
-        <item itemvalue="JUnit.FirstTest.t4" />
       </list>
     </recent_temporary>
   </component>
@@ -161,7 +158,7 @@
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
-      <workItem from="1736131729519" duration="8420000" />
+      <workItem from="1736131729519" duration="8725000" />
     </task>
     <servers />
   </component>
