@@ -20,9 +20,13 @@ public class App {
         label:
         while (true) {
             System.out.println("명령) ");
-            String cmd = sc.nextLine();
+            String cmd=sc.nextLine();
 
-            switch (cmd) {
+            String[] cmdBits = cmd.split("\\?");
+            String actionName=cmdBits[0];
+
+
+            switch (actionName) {
                 case "종료":
                     systemController.exit();
                     break;
@@ -31,6 +35,9 @@ public class App {
                     break;
                 case "목록":
                     wiseSayingController.actionPrint();
+                    break;
+                case "삭제":
+                    wiseSayingController.actionDelete(cmd);
                     break;
                 default:
                     System.out.println("올바른 명령이 아닙니다.");
