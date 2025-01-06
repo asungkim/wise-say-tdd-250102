@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FirstTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBot.java" afterDir="false" />
     </list>
@@ -59,6 +60,7 @@
     "JUnit.FirstTest.t3.executor": "Run",
     "JUnit.FirstTest.t4.executor": "Run",
     "JUnit.FirstTest.t5.executor": "Run",
+    "JUnit.FirstTest.t7.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -77,14 +79,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.FirstTest.t5">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="wise-say-tdd-250102.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.FirstTest">
     <configuration name="FirstTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <option name="PACKAGE_NAME" value="" />
@@ -124,13 +119,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FirstTest.t7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FirstTest" />
+      <option name="METHOD_NAME" value="t7" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FirstTest.t5" />
         <item itemvalue="JUnit.FirstTest" />
-        <item itemvalue="JUnit.FirstTest.t3" />
+        <item itemvalue="JUnit.FirstTest.t7" />
         <item itemvalue="JUnit.FirstTest.t4" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.FirstTest.t3" />
+        <item itemvalue="JUnit.FirstTest.t5" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +156,7 @@
       <option name="presentableId" value="Default" />
       <updated>1735796075447</updated>
       <workItem from="1735808578788" duration="50000" />
-      <workItem from="1736119966691" duration="5072000" />
+      <workItem from="1736119966691" duration="8125000" />
     </task>
     <servers />
   </component>
