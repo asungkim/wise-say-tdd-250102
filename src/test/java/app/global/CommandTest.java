@@ -48,8 +48,7 @@ public class CommandTest {
     void t5() {
         Command cmd = new Command("목록?id=1");
 
-        String paramValue = cmd.getParam("id");
-        int id=Integer.parseInt(paramValue);
+        int id=cmd.getParamAsInt("id");
 
         assertThat(id).isEqualTo(1);
 
