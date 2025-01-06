@@ -29,8 +29,20 @@ public class WiseSaying {
         return content;
     }
 
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     @Override
     public String toString() {
         return id + " / " + author + " / " + content;
+    }
+
+    public boolean isNew() {
+        return this.id == 0;
     }
 }

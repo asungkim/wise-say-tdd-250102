@@ -2,6 +2,9 @@ package app.domain.wiseSaying;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import static java.util.Arrays.stream;
 
 public class WiseSayingRepository {
     private final List<WiseSaying> wiseSayingList;
@@ -12,6 +15,12 @@ public class WiseSayingRepository {
     }
 
     public WiseSaying save(WiseSaying wiseSaying) {
+
+        // 명언 등록/수정 구별
+        if (!wiseSaying.isNew()) {
+            return wiseSaying;
+        }
+
         int id = ++lastId;
         wiseSaying.setId(id);
         wiseSayingList.add(wiseSaying);
@@ -25,5 +34,15 @@ public class WiseSayingRepository {
 
     public boolean deleteById(int id) {
         return wiseSayingList.removeIf(w -> w.getId() == id);
+    }
+
+
+    public Optional<WiseSaying> findById(int id) {
+
+        Optional<WiseSaying> opWiseSaying = wiseSayingList.stream()
+                .filter(w -> w.getId() == id)
+                .findFirst();
+
+        return opWiseSaying;
     }
 }
