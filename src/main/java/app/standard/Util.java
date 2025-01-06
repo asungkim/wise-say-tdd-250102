@@ -14,15 +14,7 @@ public class Util {
         }
 
         public static void createFile(String fileName)  {
-            Path filePath= Paths.get(fileName);
-
-            try {
-                Files.createFile(filePath);
-            }
-            catch (Exception e) {
-                System.out.println("파일 생성 실패");
-                e.printStackTrace();
-            }
+            write(fileName,"");
         }
 
         public static String readAsString(String file) {
@@ -60,6 +52,9 @@ public class Util {
                 e.printStackTrace();
             }
 
+        }
+
+        public static void createDir(String dirPath) {
         }
     }
 
