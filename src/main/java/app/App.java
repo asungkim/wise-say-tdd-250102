@@ -2,12 +2,15 @@ package app;
 
 import app.domain.wiseSaying.SystemController;
 import app.domain.wiseSaying.WiseSayingController;
+import app.global.Command;
+
 import java.util.Scanner;
 
 public class App {
     private final Scanner sc;
     private final WiseSayingController wiseSayingController;
     private final SystemController systemController;
+
 
     public App(Scanner sc) {
         this.sc = sc;
@@ -23,8 +26,9 @@ public class App {
             System.out.println("명령) ");
             String cmd=sc.nextLine();
 
-            String[] cmdBits = cmd.split("\\?");
-            String actionName=cmdBits[0];
+            Command command=new Command(cmd);
+            String actionName = command.getActionName();
+
 
 
             switch (actionName) {

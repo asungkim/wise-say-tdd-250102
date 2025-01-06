@@ -1,5 +1,7 @@
 package app.domain.wiseSaying;
 
+import app.global.Command;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,8 +41,8 @@ public class WiseSayingController {
     }
 
     public void actionDelete(String cmd) {
-        String data = cmd.split("\\?")[1];
-        int id = Integer.parseInt(data.split("=")[1]);
+        Command command=new Command(cmd);
+        int id = command.getParamAsInt("id");
 
         boolean result = wiseSayingService.delete(id);
         if (result) {

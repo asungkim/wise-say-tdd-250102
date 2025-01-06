@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/global/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/global/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/global/CommandTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,44 +50,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.t1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.t2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.t4.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.t6.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CommandTest.t7.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t10.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t11.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t3.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t4.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t5.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t7.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.FirstTest.t8.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WiseSayingControllerTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "JUnit.CommandTest.executor": "Run",
+    "JUnit.CommandTest.t1.executor": "Run",
+    "JUnit.CommandTest.t2.executor": "Run",
+    "JUnit.CommandTest.t4.executor": "Run",
+    "JUnit.CommandTest.t6.executor": "Run",
+    "JUnit.CommandTest.t7.executor": "Run",
+    "JUnit.FirstTest.executor": "Run",
+    "JUnit.FirstTest.t10.executor": "Run",
+    "JUnit.FirstTest.t11.executor": "Run",
+    "JUnit.FirstTest.t3.executor": "Run",
+    "JUnit.FirstTest.t4.executor": "Run",
+    "JUnit.FirstTest.t5.executor": "Run",
+    "JUnit.FirstTest.t7.executor": "Run",
+    "JUnit.FirstTest.t8.executor": "Run",
+    "JUnit.WiseSayingControllerTest.executor": "Run",
+    "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.CommandTest">
+}]]></component>
+  <component name="RunManager" selected="JUnit.app in wise-say-tdd-250102.test">
     <configuration name="CommandTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -99,22 +100,6 @@
       <option name="PACKAGE_NAME" value="app.global" />
       <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.global.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.global" />
-      <option name="MAIN_CLASS_NAME" value="app.global.CommandTest" />
-      <option name="METHOD_NAME" value="t4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -167,13 +152,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="app in wise-say-tdd-250102.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.app in wise-say-tdd-250102.test" />
         <item itemvalue="JUnit.CommandTest" />
         <item itemvalue="JUnit.CommandTest.t5" />
         <item itemvalue="JUnit.CommandTest.t7" />
         <item itemvalue="JUnit.CommandTest.t6" />
-        <item itemvalue="JUnit.CommandTest.t4" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +195,7 @@
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
-      <workItem from="1736161121005" duration="731000" />
+      <workItem from="1736161121005" duration="1057000" />
     </task>
     <servers />
   </component>
