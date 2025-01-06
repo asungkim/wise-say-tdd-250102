@@ -88,4 +88,22 @@ public class FirstTest {
                 .contains("1번 명언이 등록되었습니다.");
 
     }
+
+    @Test
+    @DisplayName("등록할때마다 명언번호 증가 - 4단계")
+    void t8() {
+        TestBot testBot = new TestBot();
+        String out = testBot.run("""
+                등록
+                현재를 사랑하라.
+                작자 미상
+                현재를 사랑하라.
+                작자 미상
+                """);
+
+        assertThat(out)
+                .contains("1번 명언이 등록되었습니다.")
+                .contains("2번 명언이 등록되었습니다.");
+
+    }
 }
