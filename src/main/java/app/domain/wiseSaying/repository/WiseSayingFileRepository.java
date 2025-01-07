@@ -3,6 +3,7 @@ package app.domain.wiseSaying.repository;
 import app.domain.wiseSaying.WiseSaying;
 import app.standard.Util;
 
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -31,9 +32,13 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         // 파일들을 모두 가져와야 한다.
         // 하나씩 읽어서 List로 반환
 
-//        List<WiseSaying> wiseSayingList=Util.File.getPaths(DB_PATH);
-
-        return null;
+        List<Path> pathList = Util.File.getPaths(DB_PATH);
+        // Path -> String
+        return pathList.stream()
+                .map(Path::toString)
+                .map(Util.Json::readAsMap)
+                .map(WiseSaying::fromMap)
+                .toList();
     }
 
     public boolean deleteById(int id) {

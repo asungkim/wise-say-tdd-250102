@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/standard/FIleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/standard/FIleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FIleTest">
+  <component name="RunManager" selected="JUnit.WiseSayingFileRepositoryTest.t4">
     <configuration name="FIleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -208,9 +206,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t4" />
         <item itemvalue="JUnit.FIleTest" />
         <item itemvalue="JUnit.FIleTest.t10" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t4" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t3" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest" />
       </list>
@@ -236,7 +234,7 @@
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
       <workItem from="1736161121005" duration="15718000" />
-      <workItem from="1736213203771" duration="14778000" />
+      <workItem from="1736213203771" duration="15259000" />
     </task>
     <servers />
   </component>
