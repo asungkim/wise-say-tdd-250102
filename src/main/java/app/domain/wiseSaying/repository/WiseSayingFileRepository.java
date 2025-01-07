@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class WiseSayingFileRepository implements WiseSayingRepository {
+    private static final String DB_PATH = "db/test/wiseSaying/";
     private final List<WiseSaying> wiseSayingList;
     private int lastId;
 
@@ -18,9 +19,13 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     public WiseSaying save(WiseSaying wiseSaying) {
         // 파일 저장
-        Util.Json.writeAsMap("db/wiseSaying/%d.json".formatted(wiseSaying.getId()),wiseSaying.toMap());
+        Util.Json.writeAsMap(getFilePath(wiseSaying.getId()).formatted(wiseSaying.getId()), wiseSaying.toMap());
 
         return wiseSaying;
+    }
+
+    private String getFilePath(int id) {
+        return DB_PATH + "%d.json".formatted(id);
     }
 
     public List<WiseSaying> findAll() {
@@ -29,7 +34,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     public boolean deleteById(int id) {
         // id를 통해 파일을 찾아서 삭제하기
-        return Util.File.delete("db/wiseSaying/%d.json".formatted(id));
+        return Util.File.delete(getFilePath(id).formatted(id));
     }
 
 
