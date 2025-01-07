@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -131,5 +132,31 @@ public class FIleTest {
         boolean rst= Files.exists(Paths.get(path));
         assertThat(rst).isFalse();
 
+    }
+
+    @Test
+    @DisplayName("특정 폴더의 파일 목록들 가져오기")
+    void t10() {
+        String path1="test/test1.txt";
+        String path2="test/test2.txt";
+        String path3="test/test3.txt";
+
+        Util.File.write(path1,"content1");
+        Util.File.write(path2,"content2");
+        Util.File.write(path3,"content3");
+
+
+        assertThat(Files.exists(Paths.get(path1))).isTrue();
+        assertThat(Files.exists(Paths.get(path2))).isTrue();
+        assertThat(Files.exists(Paths.get(path3))).isTrue();
+
+        String dirPath="test";
+        List<Path> pathList= Util.File.getPaths(dirPath);
+
+        assertThat(pathList)
+                .hasSize(3)
+                .contains(Paths.get(path1))
+                .contains(Paths.get(path2))
+                .contains(Paths.get(path3));
     }
 }

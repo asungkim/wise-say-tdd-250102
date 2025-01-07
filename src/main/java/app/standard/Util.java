@@ -3,9 +3,7 @@ package app.standard;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -95,6 +93,20 @@ public class Util {
                 System.out.println("폴더 생성 실패");
                 e.printStackTrace();
             }
+        }
+
+        public static List<Path> getPaths(String dirPath) {
+            try {
+                return Files.walk(Paths.get(dirPath))
+                        .filter(Files::isRegularFile)
+                        .toList();
+            }
+            catch (Exception e) {
+                System.out.println("파일 목록 가져오기 실패");
+                e.printStackTrace();
+            }
+
+            return List.of();
         }
     }
 
