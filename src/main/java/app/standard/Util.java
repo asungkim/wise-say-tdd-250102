@@ -133,6 +133,11 @@ public class Util {
         }
 
         public static void writeAsMap(String filePath, Map<String, Object> wiseSayingMap) {
+            // map을 통해 json 으로 바꾸고 이를 파일에 write
+
+            String jsonStr = MapToJson(wiseSayingMap);
+
+            File.write(filePath,jsonStr);
         }
     }
 

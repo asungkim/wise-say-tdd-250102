@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
-    </list>
+    <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -82,6 +79,8 @@
     "JUnit.JsonTest.t1.executor": "Run",
     "JUnit.JsonTest.t2.executor": "Run",
     "JUnit.JsonTest.t3.executor": "Run",
+    "JUnit.JsonTest.t4.executor": "Run",
+    "JUnit.JsonTest.t5.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
     "JUnit.WiseSayingControllerTest.t12.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
@@ -113,7 +112,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JsonTest.t4">
+  <component name="RunManager" selected="JUnit.JsonTest.t5">
     <configuration name="JsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -125,22 +124,6 @@
       <option name="PACKAGE_NAME" value="app.standard" />
       <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsonTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.standard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.standard" />
-      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
-      <option name="METHOD_NAME" value="t1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,13 +176,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JsonTest.t5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.standard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.standard" />
+      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
+      <option name="METHOD_NAME" value="t5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonTest.t5" />
         <item itemvalue="JUnit.JsonTest.t4" />
         <item itemvalue="JUnit.JsonTest" />
         <item itemvalue="JUnit.JsonTest.t3" />
         <item itemvalue="JUnit.JsonTest.t2" />
-        <item itemvalue="JUnit.JsonTest.t1" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +222,7 @@
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
       <workItem from="1736161121005" duration="15718000" />
-      <workItem from="1736213203771" duration="3766000" />
+      <workItem from="1736213203771" duration="4320000" />
     </task>
     <servers />
   </component>
