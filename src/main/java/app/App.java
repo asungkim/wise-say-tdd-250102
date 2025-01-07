@@ -23,7 +23,7 @@ public class App {
 
         label:
         while (true) {
-            System.out.println("명령) ");
+            System.out.print("명령) ");
             String cmd=sc.nextLine();
 
             Command command=new Command(cmd);
