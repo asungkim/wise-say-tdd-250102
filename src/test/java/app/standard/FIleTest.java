@@ -21,7 +21,7 @@ public class FIleTest {
     @AfterAll
     static void afterEach() {
         System.out.println("테스트 실행 후에 한번 실행");
-        Util.File.delete("test");
+        Util.File.deleteForce("test");
     }
 
 

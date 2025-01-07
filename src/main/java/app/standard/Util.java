@@ -1,10 +1,8 @@
 package app.standard;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 public class Util {
 
@@ -60,7 +58,27 @@ public class Util {
         }
 
         public static void deleteForce(String path) {
+            Path folderPath= Paths.get(path);
 
+            if (!Files.exists(folderPath)) return;
+
+            try {
+                Files.walkFileTree(folderPath,new SimpleFileVisitor<>() {
+                    @Override
+                    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                        Files.delete(file);
+                        return FileVisitResult.CONTINUE;
+                    }
+                    @Override
+                    public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+                        Files.delete(dir);
+                        return FileVisitResult.CONTINUE;
+                    }
+                });
+                }
+            catch (IOException e) {
+                    e.printStackTrace();
+            }
         }
 
         public static void createDir(String dirPath) {
