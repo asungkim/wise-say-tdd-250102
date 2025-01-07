@@ -3,6 +3,7 @@ package app.standard;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -141,6 +142,14 @@ public class Util {
         }
 
         public static Map<String, Object> readAsMap(String filePath) {
+            String jsonStr = File.readAsString(filePath);
+
+            return null;
+            // 파일에서 읽은 String을 Map으로 바꿔야함
+
+        }
+
+        public static Map<String, Object> jsonToMap(String jsonStr) {
             return null;
         }
     }
