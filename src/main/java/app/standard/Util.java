@@ -96,7 +96,18 @@ public class Util {
     public static class Json {
 
         public static String MapToJson(Map<String, Object> map) {
-            return null;
+            StringBuilder sb=new StringBuilder();
+            sb.append("{\n");
+
+            for (String key : map.keySet()) {
+                String value=map.get(key).toString();
+                sb.append("\t\"").append(key).append("\": ");
+                sb.append("\"").append(value).append("\"");
+            }
+
+            sb.append("\n}");
+
+            return sb.toString();
         }
     }
 

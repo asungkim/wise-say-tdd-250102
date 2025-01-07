@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSaying.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSaying.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +78,7 @@
     "JUnit.FirstTest.t5.executor": "Run",
     "JUnit.FirstTest.t7.executor": "Run",
     "JUnit.FirstTest.t8.executor": "Run",
+    "JUnit.JsonTest.t1.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
     "JUnit.WiseSayingControllerTest.t12.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
@@ -98,7 +98,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.build",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -219,7 +219,8 @@
       <workItem from="1735808578788" duration="50000" />
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
-      <workItem from="1736161121005" duration="15109000" />
+      <workItem from="1736161121005" duration="15718000" />
+      <workItem from="1736213203771" duration="1049000" />
     </task>
     <servers />
   </component>
