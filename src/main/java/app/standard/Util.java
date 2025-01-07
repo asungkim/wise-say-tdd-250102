@@ -33,6 +33,10 @@ public class Util {
         public static void write(String file, String content) {
             Path filePath = Paths.get(file);
 
+            if (filePath.getParent()!=null) {
+                createDir(filePath.getParent().toString());
+            }
+
             try {
                 Files.writeString(filePath, content, StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
             } catch (IOException e) {
@@ -44,7 +48,7 @@ public class Util {
         public static void delete(String file) {
             Path filePath = Paths.get(file);
 
-            if (Files.exists(filePath)) {
+            if (!Files.exists(filePath)) {
                 return;
             }
 
