@@ -44,6 +44,10 @@ public class Util {
         public static void delete(String file) {
             Path filePath = Paths.get(file);
 
+            if (Files.exists(filePath)) {
+                return;
+            }
+
             try {
                 Files.delete(filePath);
             } catch (IOException e) {

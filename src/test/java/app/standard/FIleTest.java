@@ -94,7 +94,7 @@ public class FIleTest {
         assertThat(Files.exists(Paths.get(dirPath)))
                 .isTrue();
 
-        assertThat(Files.isDirectory(Path.of(dirPath)))
+        assertThat(Files.isDirectory(Paths.get(dirPath)))
                 .isTrue();
     }
 
@@ -108,4 +108,17 @@ public class FIleTest {
         assertThat(Files.exists(Paths.get(dirPath)))
                 .isFalse();
     }
+
+    @Test
+    @DisplayName("파일 생성 -> 없는 폴더에 생성 시도하면 폴더를 생성한 후에 파일 생성")
+    void t8() {
+        String path="test/test2/test.txt";
+
+        Util.File.createFile(path);
+
+        boolean rst= Files.exists(Paths.get(path));
+        assertThat(rst).isTrue();
+
+    }
+
 }
