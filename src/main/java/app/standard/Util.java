@@ -3,6 +3,7 @@ package app.standard;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -99,7 +100,7 @@ public class Util {
 
         public static String MapToJson(Map<String, Object> map) {
 
-            StringBuilder sb=new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.append("{\n");
 
             String str = map.keySet().stream()
@@ -138,19 +139,44 @@ public class Util {
 
             String jsonStr = MapToJson(wiseSayingMap);
 
-            File.write(filePath,jsonStr);
+            File.write(filePath, jsonStr);
         }
 
         public static Map<String, Object> readAsMap(String filePath) {
             String jsonStr = File.readAsString(filePath);
 
-            return null;
-            // 파일에서 읽은 String을 Map으로 바꿔야함
+            return jsonToMap(jsonStr);
+
 
         }
 
         public static Map<String, Object> jsonToMap(String jsonStr) {
-            return null;
+
+            Map<String,Object> map=new LinkedHashMap<>();
+
+            jsonStr = jsonStr.replaceAll("\\{", "")
+                    .replaceAll("}", "")
+                    .replaceAll("\n", "");
+
+            Arrays.stream(jsonStr.split(","))
+                    .map(p->p.trim().split(":"))
+                    .forEach(p-> {
+                        String key=p[0].replaceAll("\"","");
+                        String value=p[1].trim();
+
+                        if (value.startsWith("\"")) {
+                            map.put(key,value.replaceAll("\"",""));
+                        } else if (value.contains(".")) {
+                            map.put(key,Double.parseDouble(value));
+                        } else if (value.contains("true")||value.contains("false")) {
+                            map.put(key,Boolean.parseBoolean(value));
+                        }
+                        else {
+                            map.put(key,Integer.parseInt(value));
+                        }
+                    });
+
+            return map;
         }
     }
 

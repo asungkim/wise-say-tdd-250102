@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +85,7 @@
     "JUnit.JsonTest.t4.executor": "Run",
     "JUnit.JsonTest.t5.executor": "Run",
     "JUnit.JsonTest.t6.executor": "Run",
+    "JUnit.JsonTest.t7.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
     "JUnit.WiseSayingControllerTest.t12.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
@@ -100,7 +102,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.inline.completion",
@@ -115,7 +117,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JsonTest.t6">
+  <component name="RunManager" selected="JUnit.JsonTest">
     <configuration name="JsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -127,22 +129,6 @@
       <option name="PACKAGE_NAME" value="app.standard" />
       <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsonTest.t3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.standard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.standard" />
-      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
-      <option name="METHOD_NAME" value="t3" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -195,13 +181,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="JsonTest.t7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.standard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.standard" />
+      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
+      <option name="METHOD_NAME" value="t7" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonTest" />
         <item itemvalue="JUnit.JsonTest.t6" />
+        <item itemvalue="JUnit.JsonTest.t7" />
         <item itemvalue="JUnit.JsonTest.t5" />
         <item itemvalue="JUnit.JsonTest.t4" />
-        <item itemvalue="JUnit.JsonTest" />
-        <item itemvalue="JUnit.JsonTest.t3" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +227,7 @@
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
       <workItem from="1736161121005" duration="15718000" />
-      <workItem from="1736213203771" duration="4972000" />
+      <workItem from="1736213203771" duration="7419000" />
     </task>
     <servers />
   </component>
