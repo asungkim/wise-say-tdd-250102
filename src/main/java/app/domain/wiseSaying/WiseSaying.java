@@ -1,13 +1,17 @@
 package app.domain.wiseSaying;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Getter
 @Setter
+@ToString
+@EqualsAndHashCode
 public class WiseSaying {
 
     private int id;
@@ -27,10 +31,6 @@ public class WiseSaying {
         this.author = author;
     }
 
-    @Override
-    public String toString() {
-        return id + " / " + author + " / " + content;
-    }
 
     public boolean isNew() {
         return this.id == 0;
