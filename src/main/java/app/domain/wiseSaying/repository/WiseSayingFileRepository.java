@@ -16,7 +16,6 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public WiseSaying save(WiseSaying wiseSaying) {
-
         // 명언 등록/수정 구별
         if (!wiseSaying.isNew()) {
             return wiseSaying;
@@ -24,7 +23,9 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
         int id = ++lastId;
         wiseSaying.setId(id);
-        wiseSayingList.add(wiseSaying);
+
+        // 파일 저장
+
 
         return wiseSaying;
     }
