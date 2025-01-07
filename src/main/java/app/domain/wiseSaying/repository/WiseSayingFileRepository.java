@@ -28,7 +28,8 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public boolean deleteById(int id) {
-        return wiseSayingList.removeIf(w -> w.getId() == id);
+        // id를 통해 파일을 찾아서 삭제하기
+        return Util.File.delete("db/wiseSaying/%d.json".formatted(id));
     }
 
 
