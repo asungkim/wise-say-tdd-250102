@@ -139,6 +139,10 @@ public class Util {
 
             File.write(filePath,jsonStr);
         }
+
+        public static Map<String, Object> readAsMap(String filePath) {
+            return null;
+        }
     }
 
 }
