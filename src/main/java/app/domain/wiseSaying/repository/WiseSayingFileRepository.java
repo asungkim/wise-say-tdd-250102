@@ -5,6 +5,7 @@ import app.standard.Util;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public class WiseSayingFileRepository implements WiseSayingRepository {
@@ -40,10 +41,12 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     public Optional<WiseSaying> findById(int id) {
 
-        Optional<WiseSaying> opWiseSaying = wiseSayingList.stream()
-                .filter(w -> w.getId() == id)
-                .findFirst();
+        String filePath=getFilePath(id);
 
-        return opWiseSaying;
+        Map<String, Object> map = Util.Json.readAsMap(filePath);
+
+        if (map.isEmpty()) return Optional.empty();
+
+        return Optional.of(WiseSaying.fromMap(map));
     }
 }
