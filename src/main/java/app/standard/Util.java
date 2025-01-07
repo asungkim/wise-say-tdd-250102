@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class Util {
@@ -96,23 +97,39 @@ public class Util {
     public static class Json {
 
         public static String MapToJson(Map<String, Object> map) {
+
             StringBuilder sb=new StringBuilder();
             sb.append("{\n");
 
-            int cnt=0;
-            int size=map.size();
+            String str = map.keySet().stream()
+                    .map(k -> map.get(k) instanceof String
+                            ? "\t\"%s\": \"%s\"".formatted(k, map.get(k))
+                            : "\t\"%s\": %s".formatted(k, map.get(k))
+                    ).collect(Collectors.joining(",\n"));
 
-            for (String key : map.keySet()) {
-                String value=map.get(key).toString();
-                sb.append("\t\"").append(key).append("\": ");
-                sb.append("\"").append(value).append("\"");
-
-                sb.append("\n");
-            }
-
-            sb.append("}");
+            sb.append(str);
+            sb.append("\n}");
 
             return sb.toString();
+
+//            for (String key : map.keySet()) {
+//                sb.append("\t\"").append(key).append("\": ");
+//
+//                Object value=map.get(key);
+//                if (value instanceof String) {
+//                    sb.append("\"").append(value).append("\"");
+//                }
+//                else if (value instanceof Number) {
+//                    sb.append(value);
+//                }
+//
+//
+//                sb.append("\n");
+//            }
+//
+//            sb.append("}");
+//
+//            return sb.toString();
         }
     }
 

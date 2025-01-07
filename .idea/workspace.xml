@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +78,10 @@
     "JUnit.FirstTest.t5.executor": "Run",
     "JUnit.FirstTest.t7.executor": "Run",
     "JUnit.FirstTest.t8.executor": "Run",
+    "JUnit.JsonTest.executor": "Run",
     "JUnit.JsonTest.t1.executor": "Run",
     "JUnit.JsonTest.t2.executor": "Run",
+    "JUnit.JsonTest.t3.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
     "JUnit.WiseSayingControllerTest.t12.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
@@ -110,7 +113,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JsonTest.t3">
+  <component name="RunManager" selected="JUnit.JsonTest">
     <configuration name="FIleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -126,7 +129,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FIleTest.t8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
@@ -135,9 +138,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="app.standard" />
-      <option name="MAIN_CLASS_NAME" value="app.standard.FIleTest" />
-      <option name="METHOD_NAME" value="t8" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonTest" />
         <item itemvalue="JUnit.JsonTest.t3" />
         <item itemvalue="JUnit.JsonTest.t2" />
         <item itemvalue="JUnit.JsonTest.t1" />
         <item itemvalue="JUnit.FIleTest" />
-        <item itemvalue="JUnit.FIleTest.t8" />
       </list>
     </recent_temporary>
   </component>
@@ -220,7 +222,7 @@
       <workItem from="1736119966691" duration="11698000" />
       <workItem from="1736131729519" duration="18972000" />
       <workItem from="1736161121005" duration="15718000" />
-      <workItem from="1736213203771" duration="1411000" />
+      <workItem from="1736213203771" duration="3766000" />
     </task>
     <servers />
   </component>
