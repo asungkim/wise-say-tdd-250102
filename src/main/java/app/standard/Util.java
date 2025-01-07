@@ -48,9 +48,7 @@ public class Util {
         public static void delete(String file) {
             Path filePath = Paths.get(file);
 
-            if (!Files.exists(filePath)) {
-                return;
-            }
+            if (!Files.exists(filePath)) return;
 
             try {
                 Files.delete(filePath);
@@ -58,6 +56,10 @@ public class Util {
                 System.out.println("파일 삭제 실패");
                 e.printStackTrace();
             }
+
+        }
+
+        public static void deleteForce(String path) {
 
         }
 
@@ -69,6 +71,8 @@ public class Util {
                 e.printStackTrace();
             }
         }
+
+
     }
 
 }

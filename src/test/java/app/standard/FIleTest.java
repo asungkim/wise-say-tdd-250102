@@ -121,4 +121,15 @@ public class FIleTest {
 
     }
 
+    @Test
+    @DisplayName("파일 삭제 -> 폴더가 비어있지 않을때 삭제 여부")
+    void t9() {
+        String path="test/test2/test.txt";
+
+        Util.File.deleteForce(path);
+
+        boolean rst= Files.exists(Paths.get(path));
+        assertThat(rst).isFalse();
+
+    }
 }
