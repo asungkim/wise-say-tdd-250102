@@ -131,6 +131,9 @@ public class Util {
 //
 //            return sb.toString();
         }
+
+        public static void writeAsMap(String filePath, Map<String, Object> wiseSayingMap) {
+        }
     }
 
 }
