@@ -99,13 +99,18 @@ public class Util {
             StringBuilder sb=new StringBuilder();
             sb.append("{\n");
 
+            int cnt=0;
+            int size=map.size();
+
             for (String key : map.keySet()) {
                 String value=map.get(key).toString();
                 sb.append("\t\"").append(key).append("\": ");
                 sb.append("\"").append(value).append("\"");
+
+                sb.append("\n");
             }
 
-            sb.append("\n}");
+            sb.append("}");
 
             return sb.toString();
         }
