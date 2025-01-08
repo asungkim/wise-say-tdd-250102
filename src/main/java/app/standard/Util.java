@@ -166,6 +166,7 @@ public class Util {
 
             jsonBuilder.append(str);
 
+
             jsonBuilder.append("\n]");
 
             return jsonBuilder.toString();
