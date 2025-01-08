@@ -13,12 +13,17 @@ import java.util.Optional;
 public class WiseSayingFileRepository implements WiseSayingRepository {
     private static final String DB_PATH = AppConfig.getDbPath();
     private static final String ID_FILE_PATH = DB_PATH + "/lastId.txt";
+    private static final String BUILD_PATH = DB_PATH + "/build/data.json";
 
 
     public WiseSayingFileRepository() {
         System.out.println("파일 DB 사용");
         init();
 
+    }
+
+    public static String getBuildPath() {
+        return BUILD_PATH;
     }
 
     private void init() {
@@ -94,5 +99,15 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     public void setLastId(int id) {
         Util.File.write(ID_FILE_PATH, id);
+    }
+
+    public void build() {
+        List<Map<String, Object>> mapList = findAll().stream()
+                .map(WiseSaying::toMap)
+                .toList();
+
+        String jsonStr = Util.Json.listToJson(mapList);
+
+        Util.File.write(BUILD_PATH, jsonStr);
     }
 }
