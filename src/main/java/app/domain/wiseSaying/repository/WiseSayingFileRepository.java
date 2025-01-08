@@ -110,4 +110,12 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
         Util.File.write(BUILD_PATH, jsonStr);
     }
+
+    @Override
+    public void makeSampleData(int cnt) {
+        for (int i=1;i<=cnt;i++) {
+            WiseSaying wiseSaying=new WiseSaying("명언"+i,"작가"+i);
+            save(wiseSaying);
+        }
+    }
 }

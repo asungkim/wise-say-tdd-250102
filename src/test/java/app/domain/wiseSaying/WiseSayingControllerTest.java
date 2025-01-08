@@ -276,7 +276,9 @@ public class WiseSayingControllerTest {
                 목록
                 """);
 
-        assertThat(out).contains("1 / 작가1 / 명언1");
+        assertThat(out)
+                .contains("1 / 작가1 / 명언1")
+                .contains("10 / 작가10 / 명언10");
     }
 
 }
