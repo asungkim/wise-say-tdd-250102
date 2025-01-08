@@ -281,4 +281,6 @@ public class WiseSayingControllerTest {
                 .contains("10 / 작가10 / 명언10");
     }
 
+
+
 }
