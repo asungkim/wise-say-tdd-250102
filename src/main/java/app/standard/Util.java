@@ -156,7 +156,19 @@ public class Util {
         }
 
         public static String listToJson(List<Map<String, Object>> mapList) {
-            return null;
+            StringBuilder jsonBuilder = new StringBuilder();
+
+            jsonBuilder.append("[\n");
+
+            String str = mapList.stream()
+                    .map(Json::mapToJson)
+                    .collect(Collectors.joining(",\n"));
+
+            jsonBuilder.append(str);
+
+            jsonBuilder.append("\n]");
+
+            return jsonBuilder.toString();
         }
 
         public static void writeAsMap(String filePath, Map<String, Object> wiseSayingMap) {
