@@ -118,4 +118,8 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
             save(wiseSaying);
         }
     }
+
+    public int count() {
+        return findAll().size();
+    }
 }
