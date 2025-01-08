@@ -32,6 +32,8 @@ public class WiseSayingController {
         System.out.println("번호 / 작가 / 명언");
         System.out.println("----------------------");
 
+        int page = command.getParamAsInt("page",1);
+
         List<WiseSaying> wiseSayingList;
 
 
@@ -56,11 +58,28 @@ public class WiseSayingController {
             System.out.printf("%d / %s / %s\n", wiseSayingList.get(i).getId(), wiseSayingList.get(i).getAuthor(), wiseSayingList.get(i).getContent());
         }
 
+        // 페이징
+        printPage(page);
 
     }
 
+    private void printPage(int page) {
+        for(int i = 1; i <= 2; i++) {
+            if(i == page) {
+                System.out.print("[%d]".formatted(i));
+            } else {
+                System.out.print("%d".formatted(i));
+            }
+            if(i == 2) {
+                System.out.println();
+                break;
+            }
+            System.out.print(" / ");
+        }
+    }
+
     public void actionDelete(Command cmd) {
-        int id = cmd.getParamAsInt("id");
+        int id = cmd.getParamAsInt("id",-1);
 
         boolean result = wiseSayingService.delete(id);
         if (result) {
@@ -71,7 +90,7 @@ public class WiseSayingController {
     }
 
     public void actionModify(Command cmd) {
-        int id = cmd.getParamAsInt("id");
+        int id = cmd.getParamAsInt("id",-1);
 
         Optional<WiseSaying> opWiseSaying = wiseSayingService.getItem(id);
 

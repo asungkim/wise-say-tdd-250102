@@ -281,6 +281,17 @@ public class WiseSayingControllerTest {
                 .contains("10 / 작가10 / 명언10");
     }
 
+    @Test
+    @DisplayName("페이징 - 페이징 UI 생성")
+    void t17() {
 
+        TestBot.makeSample(10);
+        String out = TestBot.run("""
+                목록?page=2
+                """);
+
+        assertThat(out)
+                .contains("1 / [2]");
+    }
 
 }

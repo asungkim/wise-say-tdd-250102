@@ -48,7 +48,7 @@ public class CommandTest {
     void t5() {
         Command cmd = new Command("목록?id=1");
 
-        int id=cmd.getParamAsInt("id");
+        int id=cmd.getParamAsInt("id",-1);
 
         assertThat(id).isEqualTo(1);
 
