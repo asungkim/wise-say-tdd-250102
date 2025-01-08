@@ -22,9 +22,9 @@ public class Command {
         String[] params = queryString.split("&");
 
         for (String param : params) {
-            String[] paramBits=param.split("=",2);
+            String[] paramBits = param.split("=", 2);
 
-            if (paramBits.length<2) {
+            if (paramBits.length < 2) {
                 continue;
             }
 
@@ -44,11 +44,14 @@ public class Command {
 
     public int getParamAsInt(String key) {
         try {
-            String param=map.get(key);
+            String param = map.get(key);
             return Integer.parseInt(param);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             return 0;
         }
+    }
+
+    public boolean isSearchCommand() {
+        return getParam("keywordType") != null || getParam("keyword") != null;
     }
 }

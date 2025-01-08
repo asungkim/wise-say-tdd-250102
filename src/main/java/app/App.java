@@ -37,7 +37,7 @@ public class App {
                     wiseSayingController.actionWrite();
                     break;
                 case "목록":
-                    wiseSayingController.actionPrint();
+                    wiseSayingController.actionPrint(command);
                     break;
                 case "삭제":
                     wiseSayingController.actionDelete(command);

@@ -1,7 +1,6 @@
 package app.domain.wiseSaying;
 
 import app.domain.wiseSaying.repository.WiseSayingFileRepository;
-import app.domain.wiseSaying.repository.WiseSayingMemRepository;
 import app.domain.wiseSaying.repository.WiseSayingRepository;
 
 import java.util.List;
@@ -42,5 +41,16 @@ public class WiseSayingService {
 
     public void build() {
         wiseSayingRepository.build();
+    }
+
+    public List<WiseSaying> search(String kType, String kw) {
+        return wiseSayingRepository.findAll().stream()
+                .filter(w -> {
+                    if (kType.equals("content")) {
+                        return w.getContent().contains(kw);
+                    } else {
+                        return w.getAuthor().contains(kw);
+                    }
+                }).toList();
     }
 }
