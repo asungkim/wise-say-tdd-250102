@@ -45,6 +45,9 @@ public class App {
                 case "수정":
                     wiseSayingController.actionModify(command);
                     break;
+                case "빌드":
+                    wiseSayingController.actionBuild();
+                    break;
                 default:
                     System.out.println("올바른 명령이 아닙니다.");
             }

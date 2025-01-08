@@ -14,7 +14,7 @@ import static org.assertj.core.api.Assertions.*;
 public class WiseSayingControllerTest {
 
     @BeforeAll
-    static void beforAll() {
+    static void beforeAll() {
         AppConfig.setTestMode();
     }
 

@@ -48,4 +48,8 @@ public class WiseSayingMemRepository implements WiseSayingRepository{
 
         return opWiseSaying;
     }
+
+    public void build() {
+
+    }
 }

@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingMemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingMemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +138,20 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t13">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="wise-say-tdd-250102.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -144,22 +163,6 @@
       <option name="PACKAGE_NAME" value="app.standard" />
       <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="JsonTest.t9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.standard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.standard" />
-      <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
-      <option name="METHOD_NAME" value="t9" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,11 +216,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t13" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest" />
         <item itemvalue="JUnit.JsonTest" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t6" />
-        <item itemvalue="JUnit.JsonTest.t9" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +246,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="7017000" />
+      <workItem from="1736299596609" duration="7336000" />
     </task>
     <servers />
   </component>
