@@ -1,12 +1,27 @@
 package app.domain.wiseSaying;
 
 import app.standard.TestBot;
+import app.standard.Util;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.net.URI;
 
 import static org.assertj.core.api.Assertions.*;
 
 public class WiseSayingControllerTest {
+
+    @BeforeEach
+    void beforeEach() {
+        Util.File.deleteForce("db/test");
+    }
+
+    @AfterEach
+    void afterEach() {
+        Util.File.deleteForce("db/test");
+    }
 
 
     @Test
@@ -179,7 +194,7 @@ public class WiseSayingControllerTest {
     }
 
     @Test
-    @DisplayName("명언 삭제에 대한 예외처리 - 7단계")
+    @DisplayName("명언 수정")
     void t12() {
         String out = TestBot.run("""
                 등록

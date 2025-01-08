@@ -13,15 +13,15 @@ import static org.assertj.core.api.Assertions.*;
 
 public class FIleTest {
 
-    @BeforeAll
-    static void beforeAll() {
-        System.out.println("테스트 실행 전에 한번 실행");
+    @BeforeEach
+     void beforeEach() {
+        System.out.println("각 테스트 실행 전에 한번 실행");
         Util.File.createDir("test");
     }
 
-    @AfterAll
-    static void afterEach() {
-        System.out.println("테스트 실행 후에 한번 실행");
+    @AfterEach
+    void afterEach() {
+        System.out.println("각 테스트 실행 후에 한번 실행");
         Util.File.deleteForce("test");
     }
 

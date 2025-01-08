@@ -11,12 +11,14 @@ import java.util.Optional;
 
 public class WiseSayingFileRepository implements WiseSayingRepository {
     private static final String DB_PATH = "db/test/wiseSaying/";
+    private int lastId;
 
     public WiseSayingFileRepository() {
         System.out.println("파일 DB 사용");
     }
 
     public WiseSaying save(WiseSaying wiseSaying) {
+        wiseSaying.setId(++lastId);
         // 파일 저장
         Util.Json.writeAsMap(getFilePath(wiseSaying.getId()).formatted(wiseSaying.getId()), wiseSaying.toMap());
 
@@ -56,5 +58,9 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         if (map.isEmpty()) return Optional.empty();
 
         return Optional.of(WiseSaying.fromMap(map));
+    }
+
+    public int getLastId() {
+        return 0;
     }
 }
