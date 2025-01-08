@@ -28,10 +28,12 @@ public class WiseSayingController {
     }
 
     public void actionPrint(Command command) {
+
         System.out.println("번호 / 작가 / 명언");
         System.out.println("----------------------");
 
         List<WiseSaying> wiseSayingList;
+
 
         if (command.isSearchCommand()) {
 
@@ -43,6 +45,11 @@ public class WiseSayingController {
         else {
             wiseSayingList = wiseSayingService.getAllItems();
 
+        }
+
+        if (wiseSayingList.isEmpty()) {
+            System.out.println("등록된 명언이 없습니다.");
+            return;
         }
 
         for (int i = wiseSayingList.size() - 1; i >= 0; i--) {
