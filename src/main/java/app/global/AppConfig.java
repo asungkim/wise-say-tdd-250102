@@ -3,6 +3,7 @@ package app.global;
 public class AppConfig {
     private static String mode;
 
+    // static 계열 생성자
     static {
         setDevMode();
     }
