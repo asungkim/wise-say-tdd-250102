@@ -31,6 +31,10 @@ public class Util {
             return "";
         }
 
+        public static void write(String file, int content) {
+            write(file, String.valueOf(content));
+        }
+
         public static void write(String file, String content) {
             Path filePath = Paths.get(file);
 
@@ -100,13 +104,16 @@ public class Util {
                 return Files.walk(Paths.get(dirPath))
                         .filter(Files::isRegularFile)
                         .toList();
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 System.out.println("파일 목록 가져오기 실패");
                 e.printStackTrace();
             }
 
             return List.of();
+        }
+
+        public static boolean exists(String filePath) {
+            return Files.exists(Paths.get(filePath));
         }
     }
 
@@ -169,27 +176,26 @@ public class Util {
 
         public static Map<String, Object> jsonToMap(String jsonStr) {
 
-            Map<String,Object> map=new LinkedHashMap<>();
+            Map<String, Object> map = new LinkedHashMap<>();
 
             jsonStr = jsonStr.replaceAll("\\{", "")
                     .replaceAll("}", "")
                     .replaceAll("\n", "");
 
             Arrays.stream(jsonStr.split(","))
-                    .map(p->p.trim().split(":"))
-                    .forEach(p-> {
-                        String key=p[0].replaceAll("\"","");
-                        String value=p[1].trim();
+                    .map(p -> p.trim().split(":"))
+                    .forEach(p -> {
+                        String key = p[0].replaceAll("\"", "");
+                        String value = p[1].trim();
 
                         if (value.startsWith("\"")) {
-                            map.put(key,value.replaceAll("\"",""));
+                            map.put(key, value.replaceAll("\"", ""));
                         } else if (value.contains(".")) {
-                            map.put(key,Double.parseDouble(value));
-                        } else if (value.contains("true")||value.contains("false")) {
-                            map.put(key,Boolean.parseBoolean(value));
-                        }
-                        else {
-                            map.put(key,Integer.parseInt(value));
+                            map.put(key, Double.parseDouble(value));
+                        } else if (value.contains("true") || value.contains("false")) {
+                            map.put(key, Boolean.parseBoolean(value));
+                        } else {
+                            map.put(key, Integer.parseInt(value));
                         }
                     });
 
