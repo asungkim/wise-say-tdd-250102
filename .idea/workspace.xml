@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +94,7 @@
     "JUnit.JsonTest.t9.executor": "Run",
     "JUnit.WiseSayingControllerTest.executor": "Run",
     "JUnit.WiseSayingControllerTest.t12.executor": "Run",
+    "JUnit.WiseSayingControllerTest.t13.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -132,7 +132,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingFileRepositoryTest">
+  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t13">
     <configuration name="JsonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -164,6 +164,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WiseSayingControllerTest.t13" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.wiseSaying.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
+      <option name="METHOD_NAME" value="t13" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WiseSayingFileRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -175,22 +191,6 @@
       <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
       <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingFileRepositoryTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WiseSayingFileRepositoryTest.t5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingFileRepositoryTest" />
-      <option name="METHOD_NAME" value="t5" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingControllerTest.t13" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest" />
         <item itemvalue="JUnit.JsonTest" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t6" />
         <item itemvalue="JUnit.JsonTest.t9" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t5" />
       </list>
     </recent_temporary>
   </component>
@@ -243,7 +243,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="6433000" />
+      <workItem from="1736299596609" duration="7017000" />
     </task>
     <servers />
   </component>
@@ -260,17 +260,6 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/repository/WiseSayingFileRepositoryTest.java</url>
-          <line>133</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,11 +1,13 @@
 package app.domain.wiseSaying;
 
+import app.domain.wiseSaying.repository.WiseSayingFileRepository;
 import app.global.AppConfig;
 import app.standard.TestBot;
 import app.standard.Util;
 import org.junit.jupiter.api.*;
 
 import java.net.URI;
+import java.nio.file.Files;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -217,4 +219,23 @@ public class WiseSayingControllerTest {
                 .doesNotContain("1 / 작자미상 / 현재를 사랑하라.");
 
     }
+
+    @Test
+    @DisplayName("빌드")
+    void t13() {
+        String out = TestBot.run("""
+                등록
+                현재를 사랑하라.
+                작자미상
+                등록
+                과거에 집착하지 마라.
+                작자미상
+                빌드
+                """);
+
+        boolean rst = Util.File.exists(WiseSayingFileRepository.getBuildPath());
+        assertThat(rst).isTrue();
+
+    }
+
 }
