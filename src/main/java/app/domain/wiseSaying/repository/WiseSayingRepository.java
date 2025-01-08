@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface WiseSayingRepository {
     WiseSaying save(WiseSaying wiseSaying);
 
-    List<WiseSaying> findAll();
+    Page findAll();
 
     boolean deleteById(int id);
 

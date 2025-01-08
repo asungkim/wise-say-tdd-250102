@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
+import static java.util.Arrays.stream;
+
 public class WiseSayingFileRepository implements WiseSayingRepository {
     private static final String DB_PATH = AppConfig.getDbPath() + "/wiseSaying";
     private static final String ID_FILE_PATH = DB_PATH + "/lastId.txt";
@@ -54,19 +56,26 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         return DB_PATH + "/" + id + ".json";
     }
 
-    public List<WiseSaying> findAll() {
+    public Page findAll() {
         // 명언들은 파일로 파편화 되어 있다
         // 파일들을 모두 가져와야 한다.
         // 하나씩 읽어서 List로 반환
 
-        List<Path> pathList = Util.File.getPaths(DB_PATH);
+        int itemsPerPage=5;
+
+
         // Path -> String
-        return pathList.stream()
+        List<WiseSaying> wiseSayings = Util.File.getPaths(DB_PATH).stream()
                 .map(Path::toString)
                 .filter(p -> p.endsWith(".json"))
                 .map(Util.Json::readAsMap)
                 .map(WiseSaying::fromMap)
                 .toList();
+
+        int totalPages = (int) Math.ceil((double) wiseSayings.size() / itemsPerPage);
+
+
+        return new Page(wiseSayings,totalPages,wiseSayings.size());
     }
 
     public boolean deleteById(int id) {
@@ -102,7 +111,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public void build() {
-        List<Map<String, Object>> mapList = findAll().stream()
+        List<Map<String, Object>> mapList = findAll().getWiseSayings().stream()
                 .map(WiseSaying::toMap)
                 .toList();
 
@@ -120,6 +129,6 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public int count() {
-        return findAll().size();
+        return findAll().getWiseSayings().size();
     }
 }

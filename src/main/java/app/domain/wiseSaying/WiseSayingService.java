@@ -1,5 +1,6 @@
 package app.domain.wiseSaying;
 
+import app.domain.wiseSaying.repository.Page;
 import app.domain.wiseSaying.repository.RepositoryProvider;
 import app.domain.wiseSaying.repository.WiseSayingFileRepository;
 import app.domain.wiseSaying.repository.WiseSayingRepository;
@@ -20,7 +21,7 @@ public class WiseSayingService {
         return wiseSayingRepository.save(wiseSaying);
     }
 
-    public List<WiseSaying> getAllItems() {
+    public Page getAllItems() {
         return wiseSayingRepository.findAll();
     }
 
@@ -45,7 +46,7 @@ public class WiseSayingService {
     }
 
     public List<WiseSaying> search(String kType, String kw) {
-        return wiseSayingRepository.findAll().stream()
+        return wiseSayingRepository.findAll().getWiseSayings().stream()
                 .filter(w -> {
                     if (kType.equals("content")) {
                         return w.getContent().contains(kw);

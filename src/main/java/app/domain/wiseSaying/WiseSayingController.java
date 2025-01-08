@@ -1,5 +1,6 @@
 package app.domain.wiseSaying;
 
+import app.domain.wiseSaying.repository.Page;
 import app.global.Command;
 
 import java.util.List;
@@ -34,6 +35,7 @@ public class WiseSayingController {
 
         int page = command.getParamAsInt("page", 1);
 
+        Page pageContent= wiseSayingService.getAllItems();
         List<WiseSaying> wiseSayingList;
 
 
@@ -44,7 +46,7 @@ public class WiseSayingController {
 
             wiseSayingList = wiseSayingService.search(kType, kw);
         } else {
-            wiseSayingList = wiseSayingService.getAllItems();
+            wiseSayingList = wiseSayingService.getAllItems().getWiseSayings();
 
         }
 
@@ -58,16 +60,11 @@ public class WiseSayingController {
         }
 
         // 페이징
-        printPage(page);
+        printPage(page,pageContent.getTotalPages());
 
     }
 
-    private void printPage(int page) {
-
-        int totalItems = wiseSayingService.count();
-        int itemsPerPage = 5;
-        int totalPages = totalItems % itemsPerPage == 0 ? totalItems / itemsPerPage : totalItems / itemsPerPage + 1;
-
+    private void printPage(int page,int totalPages) {
 
         for (int i = 1; i <= totalPages; i++) {
             if (i == page) {
