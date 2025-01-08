@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/global/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/global/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/standard/TestBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/standard/TestBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +99,7 @@
     "JUnit.WiseSayingControllerTest.t13.executor": "Run",
     "JUnit.WiseSayingControllerTest.t14.executor": "Run",
     "JUnit.WiseSayingControllerTest.t15.executor": "Run",
+    "JUnit.WiseSayingControllerTest.t16.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -135,7 +137,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t15">
+  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t16">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="wise-say-tdd-250102.main" />
@@ -197,28 +199,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WiseSayingFileRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WiseSayingControllerTest.t16" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
+          <option name="PATTERN" value="app.domain.wiseSaying.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingFileRepositoryTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
+      <option name="METHOD_NAME" value="t16" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingControllerTest.t16" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t15" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t14" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t13" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,7 +247,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="10167000" />
+      <workItem from="1736299596609" duration="11244000" />
     </task>
     <servers />
   </component>

@@ -267,4 +267,16 @@ public class WiseSayingControllerTest {
 
     }
 
+    @Test
+    @DisplayName("페이징 - 샘플데이터 생성")
+    void t16() {
+
+        TestBot.makeSample(10);
+        String out = TestBot.run("""
+                목록
+                """);
+
+        assertThat(out).contains("1 / 작가1 / 명언1");
+    }
+
 }
