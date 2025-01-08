@@ -162,11 +162,11 @@ public class Util {
 
             String str = mapList.stream()
                     .map(Json::mapToJson)
+                    .map(s -> "\t" + s)
+                    .map(s -> s.replaceAll("\n", "\n\t"))
                     .collect(Collectors.joining(",\n"));
 
             jsonBuilder.append(str);
-
-
             jsonBuilder.append("\n]");
 
             return jsonBuilder.toString();
