@@ -32,7 +32,7 @@ public class WiseSayingController {
         System.out.println("번호 / 작가 / 명언");
         System.out.println("----------------------");
 
-        int page = command.getParamAsInt("page",1);
+        int page = command.getParamAsInt("page", 1);
 
         List<WiseSaying> wiseSayingList;
 
@@ -42,9 +42,8 @@ public class WiseSayingController {
             String kType = command.getParam("keywordType");
             String kw = command.getParam("keyword");
 
-            wiseSayingList=wiseSayingService.search(kType,kw);
-        }
-        else {
+            wiseSayingList = wiseSayingService.search(kType, kw);
+        } else {
             wiseSayingList = wiseSayingService.getAllItems();
 
         }
@@ -64,13 +63,19 @@ public class WiseSayingController {
     }
 
     private void printPage(int page) {
-        for(int i = 1; i <= 2; i++) {
-            if(i == page) {
+
+        int totalItems = wiseSayingService.count();
+        int itemsPerPage = 5;
+        int totalPages = totalItems % itemsPerPage == 0 ? totalItems / itemsPerPage : totalItems / itemsPerPage + 1;
+
+
+        for (int i = 1; i <= totalPages; i++) {
+            if (i == page) {
                 System.out.print("[%d]".formatted(i));
             } else {
                 System.out.print("%d".formatted(i));
             }
-            if(i == 2) {
+            if (i == totalPages) {
                 System.out.println();
                 break;
             }
@@ -79,7 +84,7 @@ public class WiseSayingController {
     }
 
     public void actionDelete(Command cmd) {
-        int id = cmd.getParamAsInt("id",-1);
+        int id = cmd.getParamAsInt("id", -1);
 
         boolean result = wiseSayingService.delete(id);
         if (result) {
@@ -90,12 +95,12 @@ public class WiseSayingController {
     }
 
     public void actionModify(Command cmd) {
-        int id = cmd.getParamAsInt("id",-1);
+        int id = cmd.getParamAsInt("id", -1);
 
         Optional<WiseSaying> opWiseSaying = wiseSayingService.getItem(id);
 
         WiseSaying wiseSaying = opWiseSaying.orElse(null);
-        if (wiseSaying==null) {
+        if (wiseSaying == null) {
             System.out.println("%d번 명언은 존재하지 않습니다.".formatted(id));
             return;
         }
@@ -108,7 +113,7 @@ public class WiseSayingController {
         System.out.println("작가 : ");
         String newAuthor = sc.nextLine();
 
-        wiseSayingService.modify(wiseSaying,newContent,newAuthor);
+        wiseSayingService.modify(wiseSaying, newContent, newAuthor);
         System.out.println("%d번 명언이 수정되었습니다.".formatted(id));
 
 

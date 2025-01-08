@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/global/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/global/Command.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -102,6 +100,7 @@
     "JUnit.WiseSayingControllerTest.t15.executor": "Run",
     "JUnit.WiseSayingControllerTest.t16.executor": "Run",
     "JUnit.WiseSayingControllerTest.t17.executor": "Run",
+    "JUnit.WiseSayingControllerTest.t18.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -253,7 +252,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="13182000" />
+      <workItem from="1736299596609" duration="14435000" />
     </task>
     <servers />
   </component>

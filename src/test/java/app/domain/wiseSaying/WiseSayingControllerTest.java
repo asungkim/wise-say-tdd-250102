@@ -295,7 +295,7 @@ public class WiseSayingControllerTest {
     }
 
     @Test
-    @DisplayName("페이징 - 페이징 UI 생성")
+    @DisplayName("페이징 - 페이징 UI 출력, 샘플 개수에 맞는 페이지 출력")
     void t18() {
 
         TestBot.makeSample(30);
