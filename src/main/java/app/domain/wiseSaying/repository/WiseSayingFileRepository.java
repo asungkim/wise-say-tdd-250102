@@ -1,6 +1,7 @@
 package app.domain.wiseSaying.repository;
 
 import app.domain.wiseSaying.WiseSaying;
+import app.global.AppConfig;
 import app.standard.Util;
 
 import java.nio.file.Path;
@@ -10,35 +11,42 @@ import java.util.Map;
 import java.util.Optional;
 
 public class WiseSayingFileRepository implements WiseSayingRepository {
-    private static final String DB_PATH = "db/test/wiseSaying/";
-    private int lastId;
+    private static final String DB_PATH = AppConfig.getDbPath();
+    private static final String ID_FILE_PATH = DB_PATH + "/lastId.txt";
+
 
     public WiseSayingFileRepository() {
         System.out.println("파일 DB 사용");
-        lastIdInit();
+        init();
 
     }
 
-    private void lastIdInit() {
-        if(!Util.File.exists(DB_PATH + "lastId.txt")) {
-            Util.File.createFile(DB_PATH + "lastId.txt");
+    private void init() {
+        if (!Util.File.exists(ID_FILE_PATH)) {
+            Util.File.createFile(ID_FILE_PATH);
+        }
+
+        if (!Util.File.exists(DB_PATH)) {
+            Util.File.createDir(DB_PATH);
         }
     }
 
     public WiseSaying save(WiseSaying wiseSaying) {
 
-        if (wiseSaying.isNew()) wiseSaying.setId(getLastId()+1);
+        boolean isNew = wiseSaying.isNew();
+
+        if (isNew) wiseSaying.setId(getLastId() + 1);
 
         // 파일 저장
         Util.Json.writeAsMap(getFilePath(wiseSaying.getId()).formatted(wiseSaying.getId()), wiseSaying.toMap());
 
-        setLastId(wiseSaying.getId());
+        if (isNew) setLastId(wiseSaying.getId());
 
         return wiseSaying;
     }
 
-    private String getFilePath(int id) {
-        return DB_PATH + "%d.json".formatted(id);
+    static String getFilePath(int id) {
+        return DB_PATH + "/" + id + ".json";
     }
 
     public List<WiseSaying> findAll() {
@@ -50,7 +58,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         // Path -> String
         return pathList.stream()
                 .map(Path::toString)
-                .filter(p->p.endsWith(".json"))
+                .filter(p -> p.endsWith(".json"))
                 .map(Util.Json::readAsMap)
                 .map(WiseSaying::fromMap)
                 .toList();
@@ -64,7 +72,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     public Optional<WiseSaying> findById(int id) {
 
-        String filePath=getFilePath(id);
+        String filePath = getFilePath(id);
 
         Map<String, Object> map = Util.Json.readAsMap(filePath);
 
@@ -74,18 +82,17 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public int getLastId() {
-        String idStr = Util.File.readAsString(DB_PATH + "lastId.txt");
+        String idStr = Util.File.readAsString(ID_FILE_PATH);
         if (idStr.isEmpty()) return 0;
 
         try {
             return Integer.parseInt(idStr);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             return 0;
         }
     }
 
     public void setLastId(int id) {
-        Util.File.write(DB_PATH+"lastId.txt",id);
+        Util.File.write(ID_FILE_PATH, id);
     }
 }

@@ -23,7 +23,7 @@ public class Util {
 
             try {
                 return Files.readString(filePath);
-            } catch (IOException e) {
+            } catch (Exception e) {
                 System.out.println("파일 읽기 실패");
                 e.printStackTrace();
             }
@@ -119,7 +119,7 @@ public class Util {
 
     public static class Json {
 
-        public static String MapToJson(Map<String, Object> map) {
+        public static String mapToJson(Map<String, Object> map) {
 
             StringBuilder sb = new StringBuilder();
             sb.append("{\n");
@@ -155,10 +155,14 @@ public class Util {
 //            return sb.toString();
         }
 
+        public static String listToJson(List<Map<String, Object>> mapList) {
+            return null;
+        }
+
         public static void writeAsMap(String filePath, Map<String, Object> wiseSayingMap) {
             // map을 통해 json 으로 바꾸고 이를 파일에 write
 
-            String jsonStr = MapToJson(wiseSayingMap);
+            String jsonStr = mapToJson(wiseSayingMap);
 
             File.write(filePath, jsonStr);
         }
@@ -201,6 +205,8 @@ public class Util {
 
             return map;
         }
+
+
     }
 
 }

@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/global/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,75 +54,75 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.Main.executor": "Run",
-    "JUnit.All in wise-say-tdd-250102.test (1).executor": "Run",
-    "JUnit.All in wise-say-tdd-250102.test (2).executor": "Run",
-    "JUnit.All in wise-say-tdd-250102.test.executor": "Run",
-    "JUnit.CommandTest.executor": "Run",
-    "JUnit.CommandTest.t1.executor": "Run",
-    "JUnit.CommandTest.t2.executor": "Run",
-    "JUnit.CommandTest.t4.executor": "Run",
-    "JUnit.CommandTest.t6.executor": "Run",
-    "JUnit.CommandTest.t7.executor": "Run",
-    "JUnit.FIleTest.executor": "Run",
-    "JUnit.FIleTest.t1.executor": "Run",
-    "JUnit.FIleTest.t10.executor": "Run",
-    "JUnit.FIleTest.t2.executor": "Run",
-    "JUnit.FIleTest.t3.executor": "Run",
-    "JUnit.FIleTest.t4.executor": "Run",
-    "JUnit.FIleTest.t5.executor": "Run",
-    "JUnit.FIleTest.t6.executor": "Run",
-    "JUnit.FIleTest.t7.executor": "Run",
-    "JUnit.FIleTest.t8.executor": "Run",
-    "JUnit.FirstTest.executor": "Run",
-    "JUnit.FirstTest.t10.executor": "Run",
-    "JUnit.FirstTest.t11.executor": "Run",
-    "JUnit.FirstTest.t3.executor": "Run",
-    "JUnit.FirstTest.t4.executor": "Run",
-    "JUnit.FirstTest.t5.executor": "Run",
-    "JUnit.FirstTest.t7.executor": "Run",
-    "JUnit.FirstTest.t8.executor": "Run",
-    "JUnit.JsonTest.executor": "Run",
-    "JUnit.JsonTest.t1.executor": "Run",
-    "JUnit.JsonTest.t2.executor": "Run",
-    "JUnit.JsonTest.t3.executor": "Run",
-    "JUnit.JsonTest.t4.executor": "Run",
-    "JUnit.JsonTest.t5.executor": "Run",
-    "JUnit.JsonTest.t6.executor": "Run",
-    "JUnit.JsonTest.t7.executor": "Run",
-    "JUnit.JsonTest.t8.executor": "Run",
-    "JUnit.WiseSayingControllerTest.executor": "Run",
-    "JUnit.WiseSayingControllerTest.t12.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.t3.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.t4.executor": "Run",
-    "JUnit.WiseSayingFileRepositoryTest.t5.executor": "Run",
-    "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in wise-say-tdd-250102.test (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in wise-say-tdd-250102.test (2).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in wise-say-tdd-250102.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.t1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.t2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.t6.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandTest.t7.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t10.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t6.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t7.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FIleTest.t8.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t10.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t11.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t7.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FirstTest.t8.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t6.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t7.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.JsonTest.t8.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingControllerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingControllerTest.t12.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.t1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.t2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.t3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.t4.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WiseSayingFileRepositoryTest.t5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.app in wise-say-tdd-250102.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/asungkim/Desktop/MyFolder/Study/DevCourse/wise-say-tdd-250102&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -132,6 +133,22 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.WiseSayingFileRepositoryTest.t5">
+    <configuration name="All in wise-say-tdd-250102.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in wise-say-tdd-250102.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WiseSayingFileRepositoryTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -164,38 +181,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WiseSayingFileRepositoryTest.t3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingFileRepositoryTest" />
-      <option name="METHOD_NAME" value="t3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WiseSayingFileRepositoryTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingFileRepositoryTest" />
-      <option name="METHOD_NAME" value="t4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WiseSayingFileRepositoryTest.t5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -215,10 +200,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t5" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t4" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t3" />
-        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t2" />
+        <item itemvalue="JUnit.All in wise-say-tdd-250102.test (2)" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t1" />
+        <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t2" />
+        <item itemvalue="JUnit.All in wise-say-tdd-250102.test (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -244,6 +229,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
+      <workItem from="1736299596609" duration="2869000" />
     </task>
     <servers />
   </component>
