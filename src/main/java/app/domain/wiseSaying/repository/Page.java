@@ -8,21 +8,13 @@ import java.util.List;
 
 @AllArgsConstructor
 public class Page {
+    @Getter
     public List<WiseSaying> wiseSayings;
-    public int totalPages;
+    @Getter
     public int totalItems;
-
-
-    public List<WiseSaying> getWiseSayings() {
-        return wiseSayings;
-    }
+    public int itemsPerPage;
 
     public int getTotalPages() {
-        return totalPages;
+        return (int) Math.ceil((double) wiseSayings.size() / itemsPerPage);
     }
-
-    public int getTotalItems() {
-        return totalItems;
-    }
-
 }
