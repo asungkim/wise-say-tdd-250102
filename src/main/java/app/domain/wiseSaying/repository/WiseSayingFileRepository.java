@@ -1,5 +1,6 @@
 package app.domain.wiseSaying.repository;
 
+import app.domain.wiseSaying.Page;
 import app.domain.wiseSaying.WiseSaying;
 import app.global.AppConfig;
 import app.standard.Util;
@@ -62,7 +63,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
                 .toList();
     }
 
-    public Page findAll(int itemsPerPage, int page) {
+    public Page<WiseSaying> findAll(int itemsPerPage, int page) {
         List<WiseSaying> wiseSayings =findAll();
 
         List<WiseSaying> pageContent = wiseSayings.stream()
@@ -74,7 +75,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         return new Page(pageContent,wiseSayings.size(),itemsPerPage);
     }
 
-    public Page findByKeyword(String kType, String kw, int itemsPerPage, int page) {
+    public Page<WiseSaying> findByKeyword(String kType, String kw, int itemsPerPage, int page) {
         List<WiseSaying> searchedWiseSayings = findAll().stream()
                 .filter(w -> {
                     if (kType.equals("content")) {

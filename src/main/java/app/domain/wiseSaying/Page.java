@@ -1,15 +1,14 @@
-package app.domain.wiseSaying.repository;
+package app.domain.wiseSaying;
 
-import app.domain.wiseSaying.WiseSaying;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 import java.util.List;
 
 @AllArgsConstructor
-public class Page {
+public class Page<T> {
     @Getter
-    public List<WiseSaying> wiseSayings;
+    public List<T> content;
     @Getter
     public int totalItems;
     public int itemsPerPage;

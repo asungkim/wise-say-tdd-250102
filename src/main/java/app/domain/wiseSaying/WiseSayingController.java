@@ -1,6 +1,5 @@
 package app.domain.wiseSaying;
 
-import app.domain.wiseSaying.repository.Page;
 import app.global.Command;
 
 import java.util.List;
@@ -36,7 +35,7 @@ public class WiseSayingController {
         System.out.println("----------------------");
 
         int page = command.getParamAsInt("page", 1);
-        Page pageContent;
+        Page<WiseSaying> pageContent;
 
         if (command.isSearchCommand()) {
 
@@ -49,7 +48,7 @@ public class WiseSayingController {
 
         }
 
-        List<WiseSaying> wiseSayings=pageContent.getWiseSayings();
+        List<WiseSaying> wiseSayings=pageContent.getContent();
 
         if (wiseSayings.isEmpty()) {
             System.out.println("등록된 명언이 없습니다.");

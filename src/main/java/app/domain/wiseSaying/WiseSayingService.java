@@ -1,11 +1,8 @@
 package app.domain.wiseSaying;
 
-import app.domain.wiseSaying.repository.Page;
 import app.domain.wiseSaying.repository.RepositoryProvider;
-import app.domain.wiseSaying.repository.WiseSayingFileRepository;
 import app.domain.wiseSaying.repository.WiseSayingRepository;
 
-import java.util.List;
 import java.util.Optional;
 
 public class WiseSayingService {
@@ -21,7 +18,7 @@ public class WiseSayingService {
         return wiseSayingRepository.save(wiseSaying);
     }
 
-    public Page getAllItems(int itemsPerPage,int page) {
+    public Page<WiseSaying> getAllItems(int itemsPerPage,int page) {
         return wiseSayingRepository.findAll(itemsPerPage,page);
     }
 
@@ -45,7 +42,7 @@ public class WiseSayingService {
         wiseSayingRepository.build();
     }
 
-    public Page search(String kType, String kw,int itemsPerPage,int page) {
+    public Page<WiseSaying> search(String kType, String kw,int itemsPerPage,int page) {
         return wiseSayingRepository.findByKeyword(kType,kw,itemsPerPage,page);
 
     }
