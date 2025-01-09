@@ -82,12 +82,16 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
                         return w.getContent().contains(kw);
                     } else return w.getAuthor().contains(kw);
                 })
+                .sorted(Comparator.comparing(WiseSaying::getId).reversed())
                 .toList();
 
-        int totalItems = searchedWiseSayings.size();
+        return pageOf(searchedWiseSayings, itemsPerPage, page);
+    }
 
-        List<WiseSaying> searchedResult = searchedWiseSayings.stream()
-                .sorted(Comparator.comparing(WiseSaying::getId).reversed())
+    private Page<WiseSaying> pageOf(List<WiseSaying> wiseSayings,int itemsPerPage, int page) {
+        int totalItems = wiseSayings.size();
+
+        List<WiseSaying> searchedResult = wiseSayings.stream()
                 .skip((long) (page - 1) * itemsPerPage)
                 .limit(itemsPerPage)
                 .toList();

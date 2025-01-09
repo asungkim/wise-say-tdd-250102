@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/WiseSayingControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +250,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="29729000" />
+      <workItem from="1736299596609" duration="30052000" />
     </task>
     <servers />
   </component>
