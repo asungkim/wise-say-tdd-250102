@@ -36,29 +36,28 @@ public class WiseSayingController {
         System.out.println("----------------------");
 
         int page = command.getParamAsInt("page", 1);
-
-        Page pageContent = wiseSayingService.getAllItems(itemsPerPage);
-        List<WiseSaying> wiseSayingList;
-
+        Page pageContent;
 
         if (command.isSearchCommand()) {
 
             String kType = command.getParam("keywordType");
             String kw = command.getParam("keyword");
 
-            wiseSayingList = wiseSayingService.search(kType, kw,itemsPerPage);
+            pageContent=wiseSayingService.search(kType,kw,itemsPerPage,page);
         } else {
-            wiseSayingList = wiseSayingService.getAllItems(itemsPerPage).getWiseSayings();
+            pageContent=wiseSayingService.getAllItems(itemsPerPage,page);
 
         }
 
-        if (wiseSayingList.isEmpty()) {
+        List<WiseSaying> wiseSayings=pageContent.getWiseSayings();
+
+        if (wiseSayings.isEmpty()) {
             System.out.println("등록된 명언이 없습니다.");
             return;
         }
 
-        for (int i = wiseSayingList.size() - 1; i >= 0; i--) {
-            System.out.printf("%d / %s / %s\n", wiseSayingList.get(i).getId(), wiseSayingList.get(i).getAuthor(), wiseSayingList.get(i).getContent());
+        for (int i = 0; i < wiseSayings.size(); i++) {
+            System.out.printf("%d / %s / %s\n", wiseSayings.get(i).getId(), wiseSayings.get(i).getAuthor(), wiseSayings.get(i).getContent());
         }
 
         // 페이징

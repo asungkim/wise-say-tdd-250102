@@ -312,15 +312,25 @@ public class WiseSayingControllerTest {
     void t19() {
 
         TestBot.makeSample(15);
+        // 1 / 작가1 / 명언1
+        // 2 / 작가2 / 명언2
+        // 3 / 작가3 / 명언3
+        // ....
+        // 15 / 작가15 / 명언15
+
+        // 15, 14, 13, 12, 11  - 1 페이지
+        // 10, 9, 8, 7, 6 - 2 페이지
+
+
         String out = TestBot.run("""
-                목록?page=2
+                목록?keywordType=content&keyword=1
                 """);
 
         assertThat(out)
-                .containsSubsequence("15 / 작가15 / 명언 15", "14 / 작가 14 / 명언14")
+                .containsSubsequence("15 / 작가15 / 명언15", "14 / 작가14 / 명언14")
                 .doesNotContain("10 / 작가10 / 명언10");
         assertThat(out)
-                .contains("[1] / 2 / 3");
+                .contains("[1] / 2");
     }
 
 }

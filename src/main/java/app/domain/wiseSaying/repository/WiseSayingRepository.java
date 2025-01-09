@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface WiseSayingRepository {
     WiseSaying save(WiseSaying wiseSaying);
 
-    Page findAll(int itemsPerPage);
+    Page findAll(int itemsPerPage,int page);
     List<WiseSaying> findAll();
 
     boolean deleteById(int id);
@@ -19,5 +19,7 @@ public interface WiseSayingRepository {
 
     void makeSampleData(int cnt);
     int count();
+
+    Page findByKeyword(String kType, String kw, int itemsPerPage, int page);
 }
 

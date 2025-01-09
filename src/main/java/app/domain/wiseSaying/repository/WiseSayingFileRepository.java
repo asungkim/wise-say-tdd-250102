@@ -5,10 +5,7 @@ import app.global.AppConfig;
 import app.standard.Util;
 
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 
 import static java.util.Arrays.stream;
 
@@ -65,13 +62,35 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
                 .toList();
     }
 
-    public Page findAll(int itemsPerPage) {
-        // 명언들은 파일로 파편화 되어 있다
-        // 파일들을 모두 가져와야 한다.
-        // 하나씩 읽어서 List로 반환
+    public Page findAll(int itemsPerPage, int page) {
+        List<WiseSaying> wiseSayings =findAll();
 
-        List<WiseSaying> wiseSayings = findAll();
-        return new Page(wiseSayings,wiseSayings.size(),itemsPerPage);
+        List<WiseSaying> pageContent = wiseSayings.stream()
+                .skip((long) (page - 1) * itemsPerPage)
+                .limit(itemsPerPage)
+                .toList();
+
+        return new Page(pageContent,wiseSayings.size(),itemsPerPage);
+    }
+
+    public Page findByKeyword(String kType, String kw, int itemsPerPage, int page) {
+        List<WiseSaying> searchedWiseSayings = findAll().stream()
+                .filter(w -> {
+                    if (kType.equals("content")) {
+                        return w.getContent().contains(kw);
+                    } else return w.getAuthor().contains(kw);
+                })
+                .toList();
+
+        int totalItems = searchedWiseSayings.size();
+
+        List<WiseSaying> searchedResult = searchedWiseSayings.stream()
+                .sorted(Comparator.comparing(WiseSaying::getId).reversed())
+                .skip((long) (page - 1) * itemsPerPage)
+                .limit(itemsPerPage)
+                .toList();
+
+        return new Page(searchedResult,totalItems,itemsPerPage);
     }
 
     public boolean deleteById(int id) {
@@ -118,8 +137,8 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
 
     @Override
     public void makeSampleData(int cnt) {
-        for (int i=1;i<=cnt;i++) {
-            WiseSaying wiseSaying=new WiseSaying("명언"+i,"작가"+i);
+        for (int i = 1; i <= cnt; i++) {
+            WiseSaying wiseSaying = new WiseSaying("명언" + i, "작가" + i);
             save(wiseSaying);
         }
     }
@@ -127,4 +146,6 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     public int count() {
         return findAll().size();
     }
+
+
 }
