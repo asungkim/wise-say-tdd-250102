@@ -56,22 +56,21 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         return DB_PATH + "/" + id + ".json";
     }
 
-    public Page findAll() {
-        // 명언들은 파일로 파편화 되어 있다
-        // 파일들을 모두 가져와야 한다.
-        // 하나씩 읽어서 List로 반환
-
-        int itemsPerPage=5;
-
-
-        // Path -> String
-        List<WiseSaying> wiseSayings = Util.File.getPaths(DB_PATH).stream()
+    public List<WiseSaying> findAll() {
+        return Util.File.getPaths(DB_PATH).stream()
                 .map(Path::toString)
                 .filter(p -> p.endsWith(".json"))
                 .map(Util.Json::readAsMap)
                 .map(WiseSaying::fromMap)
                 .toList();
+    }
 
+    public Page findAll(int itemsPerPage) {
+        // 명언들은 파일로 파편화 되어 있다
+        // 파일들을 모두 가져와야 한다.
+        // 하나씩 읽어서 List로 반환
+
+        List<WiseSaying> wiseSayings = findAll();
         return new Page(wiseSayings,wiseSayings.size(),itemsPerPage);
     }
 
@@ -108,7 +107,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public void build() {
-        List<Map<String, Object>> mapList = findAll().getWiseSayings().stream()
+        List<Map<String, Object>> mapList = findAll().stream()
                 .map(WiseSaying::toMap)
                 .toList();
 
@@ -126,6 +125,6 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
     }
 
     public int count() {
-        return findAll().getWiseSayings().size();
+        return findAll().size();
     }
 }

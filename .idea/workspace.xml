@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/WiseSayingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +111,10 @@
     "JUnit.WiseSayingFileRepositoryTest.t5.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t6.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t7.executor": "Run",
+    "JUnit.WiseSayingFileRepositoryTest.t8.executor": "Run",
     "JUnit.app in wise-say-tdd-250102.test.executor": "Run",
     "JUnit.java in wise-say-tdd-250102.test.executor": "Run",
+    "JUnit.wiseSaying in wise-say-tdd-250102.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -141,7 +144,7 @@
       <recent name="app.standard" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingFileRepositoryTest.t8">
+  <component name="RunManager" selected="JUnit.wiseSaying in wise-say-tdd-250102.test">
     <configuration name="JsonTest.t9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -153,22 +156,6 @@
       <option name="PACKAGE_NAME" value="app.standard" />
       <option name="MAIN_CLASS_NAME" value="app.standard.JsonTest" />
       <option name="METHOD_NAME" value="t9" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WiseSayingControllerTest.t18" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
-      <option name="METHOD_NAME" value="t18" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,13 +200,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="wiseSaying in wise-say-tdd-250102.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.wiseSaying in wise-say-tdd-250102.test" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest.t8" />
         <item itemvalue="JUnit.WiseSayingFileRepositoryTest" />
         <item itemvalue="JUnit.java in wise-say-tdd-250102.test" />
         <item itemvalue="JUnit.JsonTest.t9" />
-        <item itemvalue="JUnit.WiseSayingControllerTest.t18" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +240,7 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="21298000" />
+      <workItem from="1736299596609" duration="22136000" />
     </task>
     <servers />
   </component>
