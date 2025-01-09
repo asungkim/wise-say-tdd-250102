@@ -72,7 +72,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
                 .limit(itemsPerPage)
                 .toList();
 
-        return new Page(pageContent,wiseSayings.size(),itemsPerPage);
+        return new Page<>(pageContent,wiseSayings.size(),itemsPerPage,page);
     }
 
     public Page<WiseSaying> findByKeyword(String kType, String kw, int itemsPerPage, int page) {
@@ -92,7 +92,7 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
                 .limit(itemsPerPage)
                 .toList();
 
-        return new Page(searchedResult,totalItems,itemsPerPage);
+        return new Page<>(searchedResult,totalItems,itemsPerPage,page);
     }
 
     public boolean deleteById(int id) {

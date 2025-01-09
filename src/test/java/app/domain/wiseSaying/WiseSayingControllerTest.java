@@ -364,7 +364,7 @@ public class WiseSayingControllerTest {
     @Test
     @DisplayName("겸색 UI 출력")
     void t22() {
-        TestBot.makeSample(10);
+
         String out = TestBot.run("""
                 등록
                 현재를 사랑하라.

@@ -31,8 +31,9 @@ public class WiseSayingController {
 
     public void actionPrint(Command command) {
 
-        System.out.println("번호 / 작가 / 명언");
-        System.out.println("----------------------");
+        // 역할 분리 -> 출력, 데이터 처리
+        // 출력 | 처리
+
 
         int page = command.getParamAsInt("page", 1);
         Page<WiseSaying> pageContent;
@@ -42,26 +43,44 @@ public class WiseSayingController {
             String kType = command.getParam("keywordType");
             String kw = command.getParam("keyword");
 
-            pageContent=wiseSayingService.search(kType,kw,itemsPerPage,page);
+            pageContent = wiseSayingService.search(kType, kw, itemsPerPage, page);
         } else {
-            pageContent=wiseSayingService.getAllItems(itemsPerPage,page);
+            pageContent = wiseSayingService.getAllItems(itemsPerPage, page);
 
         }
 
-        List<WiseSaying> wiseSayings=pageContent.getContent();
+        printWiseSayings(pageContent, command);
 
-        if (wiseSayings.isEmpty()) {
+    }
+
+    private void printWiseSayings(Page<WiseSaying> pageContent, Command cmd) {
+        if (pageContent.getContent().isEmpty()) {
             System.out.println("등록된 명언이 없습니다.");
             return;
         }
 
+        if (cmd.isSearchCommand()) {
+            String kwtype=cmd.getParam("keywordType");
+            String kw=cmd.getParam("keyword");
+
+            System.out.println("----------------------");
+            System.out.println("검색타입 : %s".formatted(kwtype));
+            System.out.println("검색어 : %s".formatted(kw));
+            System.out.println("----------------------");
+        }
+
+
+        System.out.println("번호 / 작가 / 명언");
+        System.out.println("----------------------");
+
+
+        List<WiseSaying> wiseSayings = pageContent.getContent();
         for (int i = 0; i < wiseSayings.size(); i++) {
             System.out.printf("%d / %s / %s\n", wiseSayings.get(i).getId(), wiseSayings.get(i).getAuthor(), wiseSayings.get(i).getContent());
         }
 
         // 페이징
-        printPage(page, pageContent.getTotalPages());
-
+        printPage(pageContent.getPage(), pageContent.getTotalPages());
     }
 
     private void printPage(int page, int totalPages) {

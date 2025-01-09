@@ -12,6 +12,8 @@ public class Page<T> {
     @Getter
     public int totalItems;
     public int itemsPerPage;
+    @Getter
+    private int page;
 
     public int getTotalPages() {
         return (int) Math.ceil((double) totalItems / itemsPerPage);
