@@ -88,4 +88,7 @@ public class WiseSayingDbRepository {
         Util.File.write(BUILD_PATH, jsonStr);
     }
 
+    public int count() {
+        return 2;
+    }
 }
