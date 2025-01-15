@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingFileRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/SimpleDb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/Sql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,9 @@
     &quot;accountId&quot;: &quot;c97d320b-b4b9-4baa-aa2f-f52fa699c683&quot;
   }
 }</component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -104,6 +112,7 @@
     "JUnit.WiseSayingControllerTest.t19.executor": "Run",
     "JUnit.WiseSayingControllerTest.t21.executor": "Run",
     "JUnit.WiseSayingControllerTest.t22.executor": "Run",
+    "JUnit.WiseSayingDbRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -134,6 +143,11 @@
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.postfix.templates",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -144,8 +158,11 @@
       <recent name="app.domain.wiseSaying.repository" />
       <recent name="app.standard" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app.standard.simpleDb" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t22">
+  <component name="RunManager" selected="JUnit.WiseSayingDbRepositoryTest.t1">
     <configuration name="WiseSayingControllerTest.t119" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -210,21 +227,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="wiseSaying in wise-say-tdd-250102.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WiseSayingDbRepositoryTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingDbRepositoryTest" />
+      <option name="METHOD_NAME" value="t1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t1" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t22" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t21" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t19" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t119" />
-        <item itemvalue="JUnit.wiseSaying in wise-say-tdd-250102.test" />
       </list>
     </recent_temporary>
   </component>
@@ -250,7 +275,9 @@
       <workItem from="1736161121005" duration="15718000" />
       <workItem from="1736213203771" duration="17448000" />
       <workItem from="1736249339904" duration="5593000" />
-      <workItem from="1736299596609" duration="30052000" />
+      <workItem from="1736299596609" duration="43323000" />
+      <workItem from="1736487113284" duration="6957000" />
+      <workItem from="1736906650478" duration="1780000" />
     </task>
     <servers />
   </component>
