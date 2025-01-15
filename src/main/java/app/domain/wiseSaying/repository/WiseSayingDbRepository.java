@@ -38,6 +38,17 @@ public class WiseSayingDbRepository {
         return Optional.of(wiseSaying);
     }
 
+
+    public boolean deleteById(int id) {
+        Sql sql = simpleDb.genSql();
+        sql.append("DELETE FROM wise_saying")
+                .append("WHERE id = ?", id);
+
+        int cnt = sql.delete(); // 삭제된 개수
+
+        return cnt > 0;
+    }
+
     public void createWiseSayingTable() {
         simpleDb.run("DROP TABLE IF EXISTS wise_saying");
 
