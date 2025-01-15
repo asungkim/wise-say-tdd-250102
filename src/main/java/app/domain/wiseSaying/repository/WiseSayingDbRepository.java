@@ -88,7 +88,9 @@ public class WiseSayingDbRepository {
         Util.File.write(BUILD_PATH, jsonStr);
     }
 
-    public int count() {
-        return 2;
+    public long count() {
+        return simpleDb.genSql().append("SELECT COUNT(*)")
+                .append("FROM wise_saying")
+                .selectLong();
     }
 }

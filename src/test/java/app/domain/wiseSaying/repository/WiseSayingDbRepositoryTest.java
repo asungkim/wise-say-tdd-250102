@@ -113,7 +113,7 @@ public class WiseSayingDbRepositoryTest {
         WiseSaying wiseSaying2 = new WiseSaying("content2", "author2");
         wiseSayingDbRepository.save(wiseSaying2);
 
-        int cnt = wiseSayingDbRepository.count();
+        long cnt = wiseSayingDbRepository.count();
 
         assertThat(cnt).isEqualTo(2);
     }
