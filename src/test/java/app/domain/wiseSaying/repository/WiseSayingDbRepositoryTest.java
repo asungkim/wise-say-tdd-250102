@@ -1,5 +1,6 @@
 package app.domain.wiseSaying.repository;
 
+import app.domain.wiseSaying.Page;
 import app.domain.wiseSaying.WiseSaying;
 import app.standard.Util;
 import org.assertj.core.api.Assertions;
@@ -35,9 +36,9 @@ public class WiseSayingDbRepositoryTest {
         WiseSaying wiseSaying = new WiseSaying("현재를 사랑하라", "작자미상");
         wiseSayingDbRepository.save(wiseSaying);
 
-        Optional<WiseSaying> opWiseSaying= wiseSayingDbRepository.findById(wiseSaying.getId());
+        Optional<WiseSaying> opWiseSaying = wiseSayingDbRepository.findById(wiseSaying.getId());
 
-        WiseSaying found=opWiseSaying.orElse(null);
+        WiseSaying found = opWiseSaying.orElse(null);
 
         assertThat(wiseSaying.getId()).isEqualTo(1);
         assertThat(found).isEqualTo(wiseSaying);
@@ -116,5 +117,32 @@ public class WiseSayingDbRepositoryTest {
         long cnt = wiseSayingDbRepository.count();
 
         assertThat(cnt).isEqualTo(2);
+    }
+
+    @Test
+    @DisplayName("페이지 정보와 결과 가져오기")
+    void t8() {
+        WiseSaying wiseSaying1 = new WiseSaying("content1", "author1");
+        wiseSayingDbRepository.save(wiseSaying1);
+
+        WiseSaying wiseSaying2 = new WiseSaying("content2", "author2");
+        wiseSayingDbRepository.save(wiseSaying2);
+
+        WiseSaying wiseSaying3 = new WiseSaying("content3", "author3");
+        wiseSayingDbRepository.save(wiseSaying3);
+
+        int itemPerPage = 5;
+        int page = 1;
+
+        Page pageContent = wiseSayingDbRepository.findAll(itemPerPage, page);
+
+        List<WiseSaying> wiseSayings = pageContent.getContent();
+        int totalItems = pageContent.getTotalItems();
+        int totalPages = pageContent.getTotalPages();
+
+        assertThat(wiseSayings).hasSize(3);
+        assertThat(totalItems).isEqualTo(3);
+        assertThat(totalPages).isEqualTo(1);
+
     }
 }
