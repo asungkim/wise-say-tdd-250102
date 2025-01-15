@@ -1,6 +1,9 @@
 package app.domain.wiseSaying;
 
+import app.domain.wiseSaying.repository.RepositoryProvider;
+import app.domain.wiseSaying.repository.WiseSayingDbRepository;
 import app.domain.wiseSaying.repository.WiseSayingFileRepository;
+import app.domain.wiseSaying.repository.WiseSayingRepository;
 import app.global.AppConfig;
 import app.standard.TestBot;
 import app.standard.Util;
@@ -16,16 +19,19 @@ public class WiseSayingControllerTest {
     @BeforeAll
     static void beforeAll() {
         AppConfig.setTestMode();
+        WiseSayingRepository repo = RepositoryProvider.provide();
+        repo.createTable();
     }
 
     @BeforeEach
     void beforeEach() {
-        Util.File.deleteForce(AppConfig.getDbPath());
+        WiseSayingRepository repo = RepositoryProvider.provide();
+        repo.truncateTable();
     }
 
     @AfterEach
     void afterEach() {
-        Util.File.deleteForce(AppConfig.getDbPath());
+
     }
 
 
@@ -277,7 +283,6 @@ public class WiseSayingControllerTest {
                 """);
 
         assertThat(out)
-                .contains("1 / 작가1 / 명언1")
                 .contains("10 / 작가10 / 명언10");
     }
 

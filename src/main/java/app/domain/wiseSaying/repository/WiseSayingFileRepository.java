@@ -88,6 +88,20 @@ public class WiseSayingFileRepository implements WiseSayingRepository {
         return pageOf(searchedWiseSayings, itemsPerPage, page);
     }
 
+    @Override
+    public void createTable() {
+        // 기존 테이블 삭제
+        Util.File.deleteForce(DB_PATH);
+        // 새 테이블 생성
+        Util.File.createFile(DB_PATH);
+    }
+
+    @Override
+    public void truncateTable() {
+        // 기존의 명언 데이터와 lastId 삭제
+        Util.File.deleteForce(DB_PATH);
+    }
+
     private Page<WiseSaying> pageOf(List<WiseSaying> wiseSayings,int itemsPerPage, int page) {
         int totalItems = wiseSayings.size();
 

@@ -13,7 +13,6 @@ import java.util.Optional;
 
 public class WiseSayingDbRepository implements WiseSayingRepository {
     private static final String DB_PATH = AppConfig.getDbPath() + "/wiseSaying";
-    private static final String ID_FILE_PATH = DB_PATH + "/lastId.txt";
     private static final String BUILD_PATH = DB_PATH + "/build/data.json";
     private final SimpleDb simpleDb;
 
@@ -21,7 +20,8 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
         this.simpleDb = new SimpleDb("localhost", "root", "lldj123414", "wiseSaying__test");
     }
 
-    public void createWiseSayingTable() {
+    @Override
+    public void createTable() {
         simpleDb.run("DROP TABLE IF EXISTS wise_saying");
 
         simpleDb.run("""
@@ -33,18 +33,29 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
                 """);
     }
 
-    public void truncateWiseSayingTable() {
-        simpleDb.run("TRUNCATE TABLE wise_saying");
+    @Override
+    public void truncateTable() {
+        simpleDb.run("DELETE FROM wise_saying");
+        simpleDb.run("ALTER TABLE wise_saying AUTO_INCREMENT = 1");
     }
+
 
     public WiseSaying save(WiseSaying wiseSaying) {
         Sql sql = simpleDb.genSql();
-        sql.append("INSERT INTO wise_saying")
-                .append("SET content = ?,", wiseSaying.getContent())
-                .append("author = ?", wiseSaying.getAuthor());
+        if(wiseSaying.isNew()) {
+            sql.append("INSERT INTO wise_saying")
+                    .append("SET content = ?,", wiseSaying.getContent())
+                    .append("author = ?", wiseSaying.getAuthor());
+            long generatedId = sql.insert();
+            wiseSaying.setId((int) generatedId);
 
-        long generatedId = sql.insert();
-        wiseSaying.setId((int) generatedId);
+            return wiseSaying;
+        }
+
+        sql.append("UPDATE wise_saying")
+                .append("SET content = ?,", wiseSaying.getContent())
+                .append("author = ?", wiseSaying.getAuthor())
+                .update();
         return wiseSaying;
     }
 
@@ -67,7 +78,8 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
 
         List<WiseSaying> content = simpleDb.genSql().append("SELECT *")
                 .append("FROM wise_saying")
-                .append(" LIMIT ?, ?", (long) (page - 1) * itemsPerPage, itemsPerPage)
+                .append("ORDER BY id DESC")
+                .append("LIMIT ?, ?", (long) (page - 1) * itemsPerPage, itemsPerPage)
                 .selectRows(WiseSaying.class);
 
         return new Page<>(content, (int) totalItems, itemsPerPage, page);
@@ -100,6 +112,8 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
         Util.File.write(BUILD_PATH, jsonStr);
     }
 
+
+
     public int count() {
         long cnt = simpleDb.genSql()
                 .append("SELECT COUNT(*)")
@@ -113,7 +127,7 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
         long cnt = simpleDb.genSql()
                 .append("SELECT COUNT(*)")
                 .append("FROM wise_saying")
-                .append("WHERE content LIKE CONCAT('%', ?, '%'')", kw)
+                .append("WHERE content LIKE CONCAT('%', ?, '%')", kw) // kType 수정필요
                 .selectLong();
 
         return (int) cnt;
@@ -127,15 +141,21 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
         List<WiseSaying> wiseSayings = simpleDb.genSql()
                 .append("SELECT *")
                 .append("FROM wise_saying")
-                .append("WHERE content LIKE CONCAT('%', ?, '%'')", kw)
+                .append("WHERE content LIKE CONCAT('%', ?, '%')", kw) // kType 수정필요
+                .append("ORDER BY id DESC")
                 .append(" LIMIT ?, ?", (long) (page - 1) * itemsPerPage, itemsPerPage)
                 .selectRows(WiseSaying.class);
 
         return new Page<>(wiseSayings, totalItems, itemsPerPage, page);
     }
 
+
+
     @Override
     public void makeSampleData(int cnt) {
-
+        for (int i = 1; i <= cnt; i++) {
+            WiseSaying wiseSaying = new WiseSaying("명언" + i, "작가" + i);
+            save(wiseSaying);
+        }
     }
 }
