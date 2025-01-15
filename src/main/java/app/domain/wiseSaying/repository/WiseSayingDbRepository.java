@@ -1,5 +1,6 @@
 package app.domain.wiseSaying.repository;
 
+import app.domain.wiseSaying.Page;
 import app.domain.wiseSaying.WiseSaying;
 import app.global.AppConfig;
 import app.standard.Util;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class WiseSayingDbRepository {
+public class WiseSayingDbRepository implements WiseSayingRepository {
     private static final String DB_PATH = AppConfig.getDbPath() + "/wiseSaying";
     private static final String ID_FILE_PATH = DB_PATH + "/lastId.txt";
     private static final String BUILD_PATH = DB_PATH + "/build/data.json";
@@ -61,12 +62,23 @@ public class WiseSayingDbRepository {
         return Optional.of(wiseSaying);
     }
 
+    public Page<WiseSaying> findAll(int itemsPerPage, int page) {
+        long totalItems = count();
+
+        List<WiseSaying> content = simpleDb.genSql().append("SELECT *")
+                .append("FROM wise_saying")
+                .append(" LIMIT ?, ?", (long) (page - 1) * itemsPerPage, itemsPerPage)
+                .selectRows(WiseSaying.class);
+
+        return new Page<>(content, (int) totalItems, itemsPerPage, page);
+    }
+
+
     public List<WiseSaying> findAll() {
         return simpleDb.genSql().append("SELECT *")
                 .append("FROM wise_saying")
                 .selectRows(WiseSaying.class);
     }
-
 
     public boolean deleteById(int id) {
         Sql sql = simpleDb.genSql();
@@ -88,9 +100,42 @@ public class WiseSayingDbRepository {
         Util.File.write(BUILD_PATH, jsonStr);
     }
 
-    public long count() {
-        return simpleDb.genSql().append("SELECT COUNT(*)")
+    public int count() {
+        long cnt = simpleDb.genSql()
+                .append("SELECT COUNT(*)")
                 .append("FROM wise_saying")
                 .selectLong();
+
+        return (int) cnt;
+    }
+
+    public int count(String kType, String kw) {
+        long cnt = simpleDb.genSql()
+                .append("SELECT COUNT(*)")
+                .append("FROM wise_saying")
+                .append("WHERE content LIKE CONCAT('%', ?, '%'')", kw)
+                .selectLong();
+
+        return (int) cnt;
+    }
+
+    @Override
+    public Page<WiseSaying> findByKeyword(String kType, String kw, int itemsPerPage, int page) {
+
+        int totalItems = count(kType, kw);
+
+        List<WiseSaying> wiseSayings = simpleDb.genSql()
+                .append("SELECT *")
+                .append("FROM wise_saying")
+                .append("WHERE content LIKE CONCAT('%', ?, '%'')", kw)
+                .append(" LIMIT ?, ?", (long) (page - 1) * itemsPerPage, itemsPerPage)
+                .selectRows(WiseSaying.class);
+
+        return new Page<>(wiseSayings, totalItems, itemsPerPage, page);
+    }
+
+    @Override
+    public void makeSampleData(int cnt) {
+
     }
 }

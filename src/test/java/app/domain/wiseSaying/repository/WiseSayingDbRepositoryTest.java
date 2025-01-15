@@ -121,7 +121,7 @@ public class WiseSayingDbRepositoryTest {
 
     @Test
     @DisplayName("페이지 정보와 결과 가져오기")
-    void t8() {
+    void t6() {
         WiseSaying wiseSaying1 = new WiseSaying("content1", "author1");
         wiseSayingDbRepository.save(wiseSaying1);
 

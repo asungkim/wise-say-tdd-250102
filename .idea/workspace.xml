@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/repository/WiseSayingDbRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/repository/WiseSayingDbRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,12 +109,14 @@
     "JUnit.WiseSayingControllerTest.t17.executor": "Run",
     "JUnit.WiseSayingControllerTest.t18.executor": "Run",
     "JUnit.WiseSayingControllerTest.t19.executor": "Run",
+    "JUnit.WiseSayingControllerTest.t20.executor": "Run",
     "JUnit.WiseSayingControllerTest.t21.executor": "Run",
     "JUnit.WiseSayingControllerTest.t22.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t2.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t4.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t5.executor": "Run",
+    "JUnit.WiseSayingDbRepositoryTest.t6.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -162,8 +166,8 @@
       <recent name="app.standard.simpleDb" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingDbRepositoryTest.t5">
-    <configuration name="WiseSayingControllerTest.t22" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WiseSayingControllerTest.t20">
+    <configuration name="WiseSayingControllerTest.t20" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
@@ -173,23 +177,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
       <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
-      <option name="METHOD_NAME" value="t22" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WiseSayingDbRepositoryTest.t1" type="JUnit" factoryName="JUnit" temporary="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingDbRepositoryTest" />
-      <option name="METHOD_NAME" value="t1" />
+      <option name="METHOD_NAME" value="t20" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -243,13 +231,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WiseSayingDbRepositoryTest.t6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingDbRepositoryTest" />
+      <option name="METHOD_NAME" value="t6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingControllerTest.t20" />
+        <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t6" />
         <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t5" />
         <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t4" />
         <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t2" />
-        <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t1" />
-        <item itemvalue="JUnit.WiseSayingControllerTest.t22" />
       </list>
     </recent_temporary>
   </component>
@@ -277,7 +281,7 @@
       <workItem from="1736249339904" duration="5593000" />
       <workItem from="1736299596609" duration="43323000" />
       <workItem from="1736487113284" duration="6957000" />
-      <workItem from="1736906650478" duration="5649000" />
+      <workItem from="1736906650478" duration="9497000" />
     </task>
     <servers />
   </component>
