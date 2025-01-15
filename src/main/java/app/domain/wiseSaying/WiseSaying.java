@@ -1,9 +1,6 @@
 package app.domain.wiseSaying;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -12,6 +9,8 @@ import java.util.Map;
 @Setter
 @ToString
 @EqualsAndHashCode
+@AllArgsConstructor
+@NoArgsConstructor
 public class WiseSaying {
 
     private int id;
@@ -19,12 +18,6 @@ public class WiseSaying {
     private String content;
 
     private String author;
-
-    public WiseSaying(int id, String content, String author) {
-        this.id = id;
-        this.author = author;
-        this.content = content;
-    }
 
     public WiseSaying(String content, String author) {
         this.content = content;

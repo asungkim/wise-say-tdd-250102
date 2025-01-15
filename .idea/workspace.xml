@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/SimpleDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/SimpleDb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -273,7 +275,7 @@
       <workItem from="1736249339904" duration="5593000" />
       <workItem from="1736299596609" duration="43323000" />
       <workItem from="1736487113284" duration="6957000" />
-      <workItem from="1736906650478" duration="2532000" />
+      <workItem from="1736906650478" duration="3908000" />
     </task>
     <servers />
   </component>
