@@ -57,7 +57,7 @@ public class WiseSayingDbRepositoryTest {
 
     @Test
     @DisplayName("모든 명언 가져오기")
-    void t4() {
+    void t3() {
         WiseSaying wiseSaying1 = new WiseSaying("content1", "author1");
         WiseSaying wiseSaying2 = new WiseSaying("content2", "author2");
         WiseSaying wiseSaying3 = new WiseSaying("content3", "author3");
@@ -66,7 +66,7 @@ public class WiseSayingDbRepositoryTest {
         wiseSayingDbRepository.save(wiseSaying2);
         wiseSayingDbRepository.save(wiseSaying3);
 
-        List<WiseSaying> wiseSayings = wiseSayingDbRepository.findAll().getContent();
+        List<WiseSaying> wiseSayings = wiseSayingDbRepository.findAll();
 
         assertThat(wiseSayings).hasSize(3);
         assertThat(wiseSayings).contains(wiseSaying1, wiseSaying2, wiseSaying3);

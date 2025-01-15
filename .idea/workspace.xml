@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/repository/WiseSayingDbRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/app/domain/wiseSaying/repository/WiseSayingDbRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +111,7 @@
     "JUnit.WiseSayingControllerTest.t22.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingDbRepositoryTest.t2.executor": "Run",
+    "JUnit.WiseSayingDbRepositoryTest.t4.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t1.executor": "Run",
     "JUnit.WiseSayingFileRepositoryTest.t2.executor": "Run",
@@ -159,23 +161,7 @@
       <recent name="app.standard.simpleDb" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WiseSayingDbRepositoryTest.t2">
-    <configuration name="WiseSayingControllerTest.t19" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wise-say-tdd-250102.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.domain.wiseSaying.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="app.domain.wiseSaying" />
-      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.WiseSayingControllerTest" />
-      <option name="METHOD_NAME" value="t19" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.WiseSayingDbRepositoryTest.t4">
     <configuration name="WiseSayingControllerTest.t21" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
@@ -240,13 +226,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WiseSayingDbRepositoryTest.t4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wise-say-tdd-250102.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.domain.wiseSaying.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="app.domain.wiseSaying.repository" />
+      <option name="MAIN_CLASS_NAME" value="app.domain.wiseSaying.repository.WiseSayingDbRepositoryTest" />
+      <option name="METHOD_NAME" value="t4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t4" />
         <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t2" />
         <item itemvalue="JUnit.WiseSayingDbRepositoryTest.t1" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t22" />
         <item itemvalue="JUnit.WiseSayingControllerTest.t21" />
-        <item itemvalue="JUnit.WiseSayingControllerTest.t19" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +276,7 @@
       <workItem from="1736249339904" duration="5593000" />
       <workItem from="1736299596609" duration="43323000" />
       <workItem from="1736487113284" duration="6957000" />
-      <workItem from="1736906650478" duration="4802000" />
+      <workItem from="1736906650478" duration="5112000" />
     </task>
     <servers />
   </component>
