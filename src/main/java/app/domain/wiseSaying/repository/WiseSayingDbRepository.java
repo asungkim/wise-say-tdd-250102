@@ -124,7 +124,9 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
 
     public int count(String kType, String kw) {
         Sql sql = simpleDb.genSql();
-        sql.append("SELECT *").append("FROM wise_saying");
+        sql
+                .append("SELECT COUNT(*)")
+                .append("FROM wise_saying");
 
         if (kType.equals("content")) {
             sql.append("WHERE content LIKE CONCAT('%', ?, '%')", kw);
@@ -133,6 +135,7 @@ public class WiseSayingDbRepository implements WiseSayingRepository {
         }
 
         long cnt = sql.selectLong();
+        System.out.println("cnt: " + cnt);
 
         return (int) cnt;
     }

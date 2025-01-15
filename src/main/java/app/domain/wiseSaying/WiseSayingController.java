@@ -59,12 +59,15 @@ public class WiseSayingController {
             return;
         }
 
+
+
+
         if (cmd.isSearchCommand()) {
-            String kwtype=cmd.getParam("keywordType");
+            String kwType=cmd.getParam("keywordType");
             String kw=cmd.getParam("keyword");
 
             System.out.println("----------------------");
-            System.out.println("검색타입 : %s".formatted(kwtype));
+            System.out.println("검색타입 : %s".formatted(kwType));
             System.out.println("검색어 : %s".formatted(kw));
             System.out.println("----------------------");
         }
@@ -78,6 +81,13 @@ public class WiseSayingController {
         for (int i = 0; i < wiseSayings.size(); i++) {
             System.out.printf("%d / %s / %s\n", wiseSayings.get(i).getId(), wiseSayings.get(i).getAuthor(), wiseSayings.get(i).getContent());
         }
+
+        System.out.println("--------------");
+        System.out.println("printWiseSaying check");
+        System.out.println("page : %d".formatted(pageContent.getPage()));
+        System.out.println("totalPages = %d".formatted(pageContent.getTotalPages()));
+        System.out.println("--------------");
+
 
         // 페이징
         printPage(pageContent.getPage(), pageContent.getTotalPages());
