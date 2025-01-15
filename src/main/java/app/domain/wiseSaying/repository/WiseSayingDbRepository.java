@@ -4,6 +4,8 @@ import app.domain.wiseSaying.WiseSaying;
 import app.standard.simpleDb.SimpleDb;
 import app.standard.simpleDb.Sql;
 
+import java.util.Optional;
+
 public class WiseSayingDbRepository {
     private final SimpleDb simpleDb;
 
@@ -29,5 +31,9 @@ public class WiseSayingDbRepository {
 
     public void truncateWiseSayingTable() {
         simpleDb.run("TRUNCATE TABLE wise_saying");
+    }
+
+    public Optional<WiseSaying> findById(int id) {
+        return null;
     }
 }

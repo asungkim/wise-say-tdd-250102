@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a407ae5-9a44-4b85-bf26-3cad024700c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/SimpleDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/app/standard/simpleDb/Sql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/standard/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/domain/wiseSaying/repository/WiseSayingDbRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +41,7 @@
     &quot;accountId&quot;: &quot;c97d320b-b4b9-4baa-aa2f-f52fa699c683&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
   <component name="KubernetesApiProvider"><![CDATA[{
   "isMigrated": true
 }]]></component>
@@ -227,7 +223,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WiseSayingDbRepositoryTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WiseSayingDbRepositoryTest.t1" type="JUnit" factoryName="JUnit" temporary="true">
       <module name="wise-say-tdd-250102.test" />
       <extension name="coverage">
         <pattern>
@@ -277,7 +273,7 @@
       <workItem from="1736249339904" duration="5593000" />
       <workItem from="1736299596609" duration="43323000" />
       <workItem from="1736487113284" duration="6957000" />
-      <workItem from="1736906650478" duration="1780000" />
+      <workItem from="1736906650478" duration="2532000" />
     </task>
     <servers />
   </component>
